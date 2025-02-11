@@ -68,7 +68,106 @@
 //   );
 // }
 
+// import React from "react";
+// import {
+//   Waves as Wave,
+//   Ship,
+//   ArrowUpRight,
+//   Facebook,
+//   Twitter,
+//   Instagram,
+//   MoveDown,
+//   ChevronRight,
+// } from "lucide-react";
+
+// export function Banner() {
+//   return (
+//     <div className="relative min-h-screen w-full overflow-hidden">
+//       <video
+//         autoPlay
+//         loop
+//         muted
+//         className="absolute top-0 left-0 w-full h-full object-cover z-0"
+//       >
+//         <source src="videos/5.mp4" type="video/mp4" />
+//       </video>
+
+//       <div className="relative z-20 min-h-screen">
+
+//         <main className="px-8 pt-40">
+//           <div className="max-w-3xl">
+//             <div className="inline-block bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-6">
+//               Your Home By The Sea
+//             </div>
+//             <h1 className="text-6xl font-semibold text-white mb-4">
+//               Surrender to Waves
+//             </h1>
+//             <h2 className="text-5xl font-semibold text-white mb-8">
+//               Discover the Shore
+//             </h2>
+//             <div className="flex space-x-4">
+//               <button className="bg-white text-black px-6 py-3 rounded-full flex items-center hover:bg-gray-100">
+//                 Sea View Rentals <ArrowUpRight className="w-4 h-4 ml-2" />
+//               </button>
+//               <button className="bg-white text-black px-6 py-3 rounded-full flex items-center hover:bg-gray-100">
+//                 Build a house <ArrowUpRight className="w-4 h-4 ml-2" />
+//               </button>
+//             </div>
+//           </div>
+//         </main>
+
+//         <div className="absolute bottom-8 w-full px-8">
+//           <div className="flex items-center text-white">
+//             <div className="flex space-x-8">
+//               <div className="flex items-center">
+//                 <Wave className="w-5 h-5 mr-2" />
+//                 <span>450 Meters from the Coast</span>
+//               </div>
+//               <div className="flex items-center">
+//                 <Ship className="w-5 h-5 mr-2" />
+//                 <span>No storm can stop us</span>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         <div className=" absolute right-20 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-30">
+//           <a
+//             href="#"
+//             className="p-2 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors"
+//           >
+//             <Facebook className="w-5 h-5 text-white" />
+//           </a>
+//           <a
+//             href="#"
+//             className="p-2 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors"
+//           >
+//             <Twitter className="w-5 h-5 text-white" />
+//           </a>
+//           <a
+//             href="#"
+//             className="p-2 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors"
+//           >
+//             <Instagram className="w-5 h-5 text-white" />
+//           </a>
+//         </div>
+
+//         <div className=" absolute right-8 bottom-40">
+//           <div className="text-white rotate-90 flex items-center">
+//             <span className="mr-6">SCROLL</span>
+//             <div className=" -rotate-90">
+//               <MoveDown className="w-12 h-12" />
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 import {
   Waves as Wave,
   Ship,
@@ -77,47 +176,105 @@ import {
   Twitter,
   Instagram,
   MoveDown,
-  ChevronRight,
 } from "lucide-react";
+
+// Animation variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const socialVariants = {
+  hidden: { opacity: 0, scale: 0.5 },
+  visible: { opacity: 1, scale: 1 },
+};
 
 export function Banner() {
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
-      {/* Video Background */}
-      <video
+      {/* Video Background with fade-in */}
+      <motion.video
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2 }}
         autoPlay
         loop
         muted
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
         <source src="videos/5.mp4" type="video/mp4" />
-      </video>
+      </motion.video>
 
-      {/* Overlay */}
-      {/* <div className="absolute inset-0 bg-black/30 z-10" /> */}
-
-      {/* Content */}
-      <div className="relative z-20 min-h-screen">
+      {/* Content Container */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="relative z-20 min-h-screen"
+      >
         {/* Main Content */}
         <main className="px-8 pt-40">
           <div className="max-w-3xl">
-            <div className="inline-block bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-6">
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="inline-block bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-6"
+            >
               Your Home By The Sea
-            </div>
-            <h1 className="text-6xl font-semibold text-white mb-4">
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="text-6xl font-semibold text-white mb-4"
+            >
               Surrender to Waves
-            </h1>
-            <h2 className="text-5xl font-semibold text-white mb-8">
+            </motion.h1>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="text-5xl font-semibold text-white mb-8"
+            >
               Discover the Shore
-            </h2>
-            <div className="flex space-x-4">
-              <button className="bg-white text-black px-6 py-3 rounded-full flex items-center hover:bg-gray-100">
+            </motion.h2>
+
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              className="flex space-x-4"
+            >
+              <motion.button
+                variants={itemVariants}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-white text-black px-6 py-3 rounded-full flex items-center hover:bg-gray-100"
+              >
                 Sea View Rentals <ArrowUpRight className="w-4 h-4 ml-2" />
-              </button>
-              <button className="bg-white text-black px-6 py-3 rounded-full flex items-center hover:bg-gray-100">
+              </motion.button>
+              <motion.button
+                variants={itemVariants}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-white text-black px-6 py-3 rounded-full flex items-center hover:bg-gray-100"
+              >
                 Build a house <ArrowUpRight className="w-4 h-4 ml-2" />
-              </button>
-            </div>
+              </motion.button>
+            </motion.div>
           </div>
         </main>
 
@@ -125,56 +282,78 @@ export function Banner() {
         <div className="absolute bottom-8 w-full px-8">
           <div className="flex items-center text-white">
             <div className="flex space-x-8">
-              <div className="flex items-center">
+              <motion.div
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 1.2 }}
+                className="flex items-center"
+              >
                 <Wave className="w-5 h-5 mr-2" />
                 <span>450 Meters from the Coast</span>
-              </div>
-              <div className="flex items-center">
+              </motion.div>
+              <motion.div
+                initial={{ x: 100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 1.2 }}
+                className="flex items-center"
+              >
                 <Ship className="w-5 h-5 mr-2" />
                 <span>No storm can stop us</span>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
 
-        {/* Social Links - Now positioned on the right side */}
-        <div className=" absolute right-20 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-30">
-          <a
-            href="#"
-            className="p-2 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors"
-          >
-            <Facebook className="w-5 h-5 text-white" />
-          </a>
-          <a
-            href="#"
-            className="p-2 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors"
-          >
-            <Twitter className="w-5 h-5 text-white" />
-          </a>
-          <a
-            href="#"
-            className="p-2 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors"
-          >
-            <Instagram className="w-5 h-5 text-white" />
-          </a>
-        </div>
+        {/* Social Links */}
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                delayChildren: 1.5,
+                staggerChildren: 0.2,
+              },
+            },
+          }}
+          className="absolute right-20 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-30"
+        >
+          {[Facebook, Twitter, Instagram].map((Icon, index) => (
+            <motion.a
+              key={index}
+              variants={socialVariants}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              href="#"
+              className="p-2 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors"
+            >
+              <Icon className="w-5 h-5 text-white" />
+            </motion.a>
+          ))}
+        </motion.div>
 
         {/* Scroll Indicator */}
-        <div className=" absolute right-8 bottom-40">
+        <div className="absolute right-8 bottom-40">
           <div className="text-white rotate-90 flex items-center">
             <span className="mr-6">SCROLL</span>
-            <div className=" -rotate-90">
-              <MoveDown className="w-12 h-12" />
-            </div>
-
-            {/* <div className="w-16 h-px bg-white">
-              <ChevronRight />
-            </div> */}
+            <motion.div
+              animate={{
+                x: [0, 20, 0],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className=""
+            >
+              <MoveDown className="w-12 h-12 -rotate-90" />
+            </motion.div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
-
-// export default App;
