@@ -71,3 +71,7 @@ body {
   }
 } */
 
+
+.text-stroke-orange {
+  -webkit-text-stroke: 1px #f97316; 
+}

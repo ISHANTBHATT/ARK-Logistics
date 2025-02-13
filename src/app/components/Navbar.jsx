@@ -193,13 +193,16 @@ export function Navbar() {
             Home
           </a>
           <a href="#" className="hover:text-gray-300">
-            Destinations
+            About
           </a>
           <a href="#" className="hover:text-gray-300">
-            Ships
+            Services
           </a>
           <a href="#" className="hover:text-gray-300">
-            My Cruise
+            Clients
+          </a>
+          <a href="#" className="hover:text-gray-300">
+            Career
           </a>
           <button className="bg-white text-black px-4 py-2 rounded-full flex items-center">
             Contact <ArrowUpRight className="w-4 h-4 ml-1" />
