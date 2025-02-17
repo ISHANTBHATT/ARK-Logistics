@@ -219,7 +219,7 @@ export function Navbar2() {
               </div>
               <Button
                 variant="destructive"
-                className="bg-orange-500 hover:bg-orange-600 rounded-xl text-white/80"
+                className="bg-[#228186] hover:bg-[#1A6266] rounded-xl text-white/80"
               >
                 Contact
               </Button>

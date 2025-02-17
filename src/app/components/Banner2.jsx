@@ -204,7 +204,7 @@ function Banner2() {
                     {slide.subtitle}
                   </p>
                   <div className="flex gap-4 justify-center animate-fade-in-up animate-delay-400 items-center">
-                    <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-xl transition-colors">
+                    <button className="bg-[#228186] hover:bg-[#1A6266] text-white px-8 py-3 rounded-xl transition-colors">
                       ABOUT US
                     </button>
                     <div className="">
