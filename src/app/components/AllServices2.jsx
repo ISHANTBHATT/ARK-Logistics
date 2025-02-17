@@ -705,7 +705,7 @@
 //         <div className="relative">
 //           <div className="overflow-hidden">
 //             <div
-//               className="flex transition-transform duration-500 ease-in-out -mx-4"
+//               className="flex transition-transform duration-500 ease-in-out  py-10"
 //               style={{ transform: `translateX(-${currentIndex * 33.333}%)` }}
 //               onTransitionEnd={() => setIsAnimating(false)}
 //             >
@@ -773,8 +773,349 @@
 
 // export default AllServices2;
 
+// "use client";
+// import { useState, useEffect } from "react";
+// import {
+//   ChevronLeft,
+//   ChevronRight,
+//   Warehouse,
+//   Package,
+//   Plane,
+//   Ship,
+//   Truck,
+//   TrainFront,
+// } from "lucide-react";
+
+// const services = [
+//   {
+//     id: "01",
+//     title: "Air Freight",
+//     description:
+//       "Global air freight solutions with express delivery options and real-time tracking for time-sensitive cargo.",
+//     icon: Plane,
+//   },
+//   {
+//     id: "02",
+//     title: "Ocean Freight",
+//     description:
+//       "Reliable sea freight services with flexible container solutions and competitive rates for international shipping.",
+//     icon: Ship,
+//   },
+//   {
+//     id: "03",
+//     title: "Road Transport",
+//     description:
+//       "Comprehensive road transportation network covering local and interstate routes with dedicated fleet services.",
+//     icon: Truck,
+//   },
+//   {
+//     id: "04",
+//     title: "Rail Freight",
+//     description:
+//       "Sustainable rail freight solutions for bulk cargo with extensive network coverage and intermodal options.",
+//     icon: TrainFront,
+//   },
+//   {
+//     id: "05",
+//     title: "Warehousing",
+//     description:
+//       "State-of-the-art warehousing facilities with inventory management and distribution services.",
+//     icon: Warehouse,
+//   },
+//   {
+//     id: "06",
+//     title: "Project Cargo",
+//     description:
+//       "Specialized handling of oversized and heavy-lift cargo with end-to-end project management.",
+//     icon: Package,
+//   },
+// ];
+
+// // Cloning the services for infinite scrolling effect
+// const extendedServices = [...services, ...services];
+
+// function AllServices2() {
+//   const [currentIndex, setCurrentIndex] = useState(0);
+//   const [isAnimating, setIsAnimating] = useState(false);
+
+//   const nextSlide = () => {
+//     if (!isAnimating) {
+//       setIsAnimating(true);
+//       setCurrentIndex((prev) => prev + 1);
+//     }
+//   };
+
+//   const prevSlide = () => {
+//     if (!isAnimating) {
+//       setIsAnimating(true);
+//       setCurrentIndex((prev) =>
+//         prev === 0 ? extendedServices.length - 1 : prev - 1
+//       );
+//     }
+//   };
+
+//   useEffect(() => {
+//     const transitionEndHandler = () => {
+//       setIsAnimating(false);
+
+//       // Reset index when reaching the duplicated section
+//       if (currentIndex >= services.length) {
+//         setCurrentIndex(0);
+//       }
+//     };
+
+//     const timer = setInterval(nextSlide, 5000);
+//     return () => clearInterval(timer);
+//   }, [currentIndex]);
+
+//   return (
+//     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+//       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+//         {/* Header Section */}
+//         <div className="text-center mb-20">
+//           <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent mb-4">
+//             ALL SERVICES
+//           </h2>
+//           <h3 className="text-5xl font-bold text-[#002B5B] mb-6">
+//             Trusted For Our Services
+//           </h3>
+//           <p className="text-gray-600 max-w-2xl mx-auto">
+//             Comprehensive logistics solutions tailored to your needs. From air
+//             freight to project cargo, we deliver excellence across all
+//             transportation modes.
+//           </p>
+//         </div>
+
+//         {/* Services Carousel */}
+//         <div className="relative">
+//           <div className="overflow-hidden">
+//             <div
+//               className="flex transition-transform duration-500 ease-in-out"
+//               style={{
+//                 transform: `translateX(-${
+//                   (currentIndex % services.length) * 33.333
+//                 }%)`,
+//               }}
+//               onTransitionEnd={() => setIsAnimating(false)}
+//             >
+//               {extendedServices.map((service, index) => {
+//                 const Icon = service.icon;
+//                 return (
+//                   <div key={index} className="w-1/3 flex-shrink-0 px-4">
+//                     <div className="relative overflow-hidden group rounded-xl p-8 transition-all duration-300 border border-gray-200 hover:shadow-xl hover:border-orange-300 bg-white hover:-translate-y-2 h-full">
+//                       <div className="absolute top-0 right-0 w-32 h-32 -mr-16 -mt-16 bg-gradient-to-r from-orange-100 to-orange-200 rounded-full opacity-20 group-hover:opacity-30 transition-opacity" />
+
+//                       <div className="relative">
+//                         <span className="text-5xl font-bold text-orange-500/20 mb-4 block transition-transform duration-300 group-hover:-translate-y-2">
+//                           {service.id}
+//                         </span>
+
+//                         <div className="flex items-center mb-4">
+//                           <div className="p-3 bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl mr-4 shadow-md">
+//                             <Icon className="w-8 h-8 text-orange-600" />
+//                           </div>
+//                           <h4 className="text-2xl font-bold text-[#002B5B]">
+//                             {service.title}
+//                           </h4>
+//                         </div>
+
+//                         <p className="text-gray-600 mb-6 line-clamp-3">
+//                           {service.description}
+//                         </p>
+
+//                         <button className="inline-flex items-center bg-gradient-to-r from-orange-500 to-orange-400 text-white px-6 py-2 rounded-full font-semibold hover:from-orange-600 hover:to-orange-500 transition-all group">
+//                           VIEW DETAIL
+//                           <ChevronRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
+//                         </button>
+//                       </div>
+//                     </div>
+//                   </div>
+//                 );
+//               })}
+//             </div>
+//           </div>
+
+//           {/* Navigation Buttons */}
+//           <div className="flex justify-center mt-12 gap-4">
+//             <button
+//               onClick={prevSlide}
+//               disabled={isAnimating}
+//               className="p-2 rounded-full bg-[#002B5B] text-white hover:bg-[#003B7B] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+//               aria-label="Previous slide"
+//             >
+//               <ChevronLeft className="w-6 h-6" />
+//             </button>
+//             <button
+//               onClick={nextSlide}
+//               disabled={isAnimating}
+//               className="p-2 rounded-full bg-[#002B5B] text-white hover:bg-[#003B7B] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+//               aria-label="Next slide"
+//             >
+//               <ChevronRight className="w-6 h-6" />
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default AllServices2;
+
+//working
+// "use client";
+// import React from "react";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Navigation, Autoplay } from "swiper/modules";
+// import {
+//   ChevronLeft,
+//   ChevronRight,
+//   Warehouse,
+//   Package,
+//   Plane,
+//   Ship,
+//   Truck,
+//   TrainFront,
+// } from "lucide-react";
+// import "swiper/css";
+// import "swiper/css/navigation";
+
+// const services = [
+//   {
+//     id: "01",
+//     title: "Air Freight",
+//     description:
+//       "Global air freight solutions with express delivery options and real-time tracking for time-sensitive cargo.",
+//     icon: Plane,
+//   },
+//   {
+//     id: "02",
+//     title: "Ocean Freight",
+//     description:
+//       "Reliable sea freight services with flexible container solutions and competitive rates for international shipping.",
+//     icon: Ship,
+//   },
+//   {
+//     id: "03",
+//     title: "Road Transport",
+//     description:
+//       "Comprehensive road transportation network covering local and interstate routes with dedicated fleet services.",
+//     icon: Truck,
+//   },
+//   {
+//     id: "04",
+//     title: "Rail Freight",
+//     description:
+//       "Sustainable rail freight solutions for bulk cargo with extensive network coverage and intermodal options.",
+//     icon: TrainFront,
+//   },
+//   {
+//     id: "05",
+//     title: "Warehousing",
+//     description:
+//       "State-of-the-art warehousing facilities with inventory management and distribution services.",
+//     icon: Warehouse,
+//   },
+//   {
+//     id: "06",
+//     title: "Project Cargo",
+//     description:
+//       "Specialized handling of oversized and heavy-lift cargo with end-to-end project management.",
+//     icon: Package,
+//   },
+// ];
+
+// export default function AllServices() {
+//   return (
+//     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+//       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+//         <div className="text-center mb-20">
+//           <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent mb-4">
+//             ALL SERVICES
+//           </h2>
+//           <h3 className="text-5xl font-bold text-[#002B5B] mb-6">
+//             Trusted For Our Services
+//           </h3>
+//           <p className="text-gray-600 max-w-2xl mx-auto">
+//             Comprehensive logistics solutions tailored to your needs. From air
+//             freight to project cargo, we deliver excellence across all
+//             transportation modes.
+//           </p>
+//         </div>
+
+//         <div className="relative">
+//           <Swiper
+//             slidesPerView={3}
+//             spaceBetween={30}
+//             loop={true}
+//             modules={[Navigation, Autoplay]}
+//             autoplay={{
+//               delay: 5000,
+//               disableOnInteraction: false,
+//             }}
+//             navigation={{
+//               prevEl: ".prev-button",
+//               nextEl: ".next-button",
+//             }}
+//             className="mySwiper"
+//           >
+//             {services.map((service) => {
+//               const Icon = service.icon;
+//               return (
+//                 <SwiperSlide key={service.id}>
+//                   <div className="relative overflow-hidden group rounded-xl p-8 transition-all duration-300 border border-gray-200 hover:shadow-xl hover:border-orange-300 bg-white hover:-translate-y-2 h-full">
+//                     <div className="absolute top-0 right-0 w-32 h-32 -mr-16 -mt-16 bg-gradient-to-r from-orange-100 to-orange-200 rounded-full opacity-20 group-hover:opacity-30 transition-opacity" />
+//                     <div className="relative">
+//                       <span className="text-5xl font-bold text-orange-500/20 mb-4 block transition-transform duration-300 group-hover:-translate-y-2">
+//                         {service.id}
+//                       </span>
+//                       <div className="flex items-center mb-4">
+//                         <div className="p-3 bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl mr-4 shadow-md">
+//                           <Icon className="w-8 h-8 text-orange-600" />
+//                         </div>
+//                         <h4 className="text-2xl font-bold text-[#002B5B]">
+//                           {service.title}
+//                         </h4>
+//                       </div>
+//                       <p className="text-gray-600 mb-6 line-clamp-3">
+//                         {service.description}
+//                       </p>
+//                       <button className="inline-flex items-center bg-gradient-to-r from-orange-500 to-orange-400 text-white px-6 py-2 rounded-full font-semibold hover:from-orange-600 hover:to-orange-500 transition-all group">
+//                         VIEW DETAIL
+//                         <ChevronRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
+//                       </button>
+//                     </div>
+//                   </div>
+//                 </SwiperSlide>
+//               );
+//             })}
+//           </Swiper>
+
+//           <div className="flex justify-center mt-12 gap-4">
+//             <button
+//               className="prev-button p-2 rounded-full bg-[#002B5B] text-white hover:bg-[#003B7B] transition-colors"
+//               aria-label="Previous slide"
+//             >
+//               <ChevronLeft className="w-6 h-6" />
+//             </button>
+//             <button
+//               className="next-button p-2 rounded-full bg-[#002B5B] text-white hover:bg-[#003B7B] transition-colors"
+//               aria-label="Next slide"
+//             >
+//               <ChevronRight className="w-6 h-6" />
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
 "use client";
-import { useState, useEffect } from "react";
+import React from "react";
+import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
 import {
   ChevronLeft,
   ChevronRight,
@@ -785,6 +1126,8 @@ import {
   Truck,
   TrainFront,
 } from "lucide-react";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const services = [
   {
@@ -831,133 +1174,120 @@ const services = [
   },
 ];
 
-// Cloning the services for infinite scrolling effect
-const extendedServices = [...services, ...services];
-
-function AllServices2() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  const nextSlide = () => {
-    if (!isAnimating) {
-      setIsAnimating(true);
-      setCurrentIndex((prev) => prev + 1);
-    }
-  };
-
-  const prevSlide = () => {
-    if (!isAnimating) {
-      setIsAnimating(true);
-      setCurrentIndex((prev) =>
-        prev === 0 ? extendedServices.length - 1 : prev - 1
-      );
-    }
-  };
-
-  useEffect(() => {
-    const transitionEndHandler = () => {
-      setIsAnimating(false);
-
-      // Reset index when reaching the duplicated section
-      if (currentIndex >= services.length) {
-        setCurrentIndex(0);
-      }
-    };
-
-    const timer = setInterval(nextSlide, 5000);
-    return () => clearInterval(timer);
-  }, [currentIndex]);
-
+export default function AllServices() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-        {/* Header Section */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8"
+      >
         <div className="text-center mb-20">
-          <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent mb-4">
+          <motion.h2
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+            className="text-4xl font-bold tracking-tight bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent mb-4"
+          >
             ALL SERVICES
-          </h2>
-          <h3 className="text-5xl font-bold text-[#002B5B] mb-6">
+          </motion.h2>
+          <motion.h3
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 1 }}
+            className="text-5xl font-bold text-[#002B5B] mb-6"
+          >
             Trusted For Our Services
-          </h3>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          </motion.h3>
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 1.2 }}
+            className="text-gray-600 max-w-2xl mx-auto"
+          >
             Comprehensive logistics solutions tailored to your needs. From air
             freight to project cargo, we deliver excellence across all
             transportation modes.
-          </p>
+          </motion.p>
         </div>
-
-        {/* Services Carousel */}
         <div className="relative">
-          <div className="overflow-hidden">
-            <div
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{
-                transform: `translateX(-${
-                  (currentIndex % services.length) * 33.333
-                }%)`,
-              }}
-              onTransitionEnd={() => setIsAnimating(false)}
-            >
-              {extendedServices.map((service, index) => {
-                const Icon = service.icon;
-                return (
-                  <div key={index} className="w-1/3 flex-shrink-0 px-4">
-                    <div className="relative overflow-hidden group rounded-xl p-8 transition-all duration-300 border border-gray-200 hover:shadow-xl hover:border-orange-300 bg-white hover:-translate-y-2 h-full">
-                      <div className="absolute top-0 right-0 w-32 h-32 -mr-16 -mt-16 bg-gradient-to-r from-orange-100 to-orange-200 rounded-full opacity-20 group-hover:opacity-30 transition-opacity" />
-
-                      <div className="relative">
-                        <span className="text-5xl font-bold text-orange-500/20 mb-4 block transition-transform duration-300 group-hover:-translate-y-2">
-                          {service.id}
-                        </span>
-
-                        <div className="flex items-center mb-4">
-                          <div className="p-3 bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl mr-4 shadow-md">
-                            <Icon className="w-8 h-8 text-orange-600" />
-                          </div>
-                          <h4 className="text-2xl font-bold text-[#002B5B]">
-                            {service.title}
-                          </h4>
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={20}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            //  spaceBetween={30}
+            loop={true}
+            modules={[Navigation, Autoplay]}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+            navigation={{
+              prevEl: ".prev-button",
+              nextEl: ".next-button",
+            }}
+            className="mySwiper"
+          >
+            {services.map((service) => (
+              <SwiperSlide key={service.id}>
+                <motion.div
+                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 50 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                  className="py-2"
+                >
+                  <div className="relative overflow-hidden group rounded-xl p-8 transition-all duration-300 border border-gray-200 hover:shadow-xl hover:border-orange-300 bg-white hover:-translate-y-2 h-full">
+                    <div className="absolute top-0 right-0 w-32 h-32 -mr-16 -mt-16 bg-gradient-to-r from-orange-100 to-orange-200 rounded-full opacity-20 group-hover:opacity-30 transition-opacity" />
+                    <div className="relative">
+                      <span className="text-5xl font-bold text-orange-500/20 mb-4 block transition-transform duration-300 group-hover:-translate-y-2">
+                        {service.id}
+                      </span>
+                      <div className="flex items-center mb-4">
+                        <div className="p-3 bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl mr-4 shadow-md">
+                          <service.icon className="w-8 h-8 text-orange-600" />
                         </div>
-
-                        <p className="text-gray-600 mb-6 line-clamp-3">
-                          {service.description}
-                        </p>
-
-                        <button className="inline-flex items-center bg-gradient-to-r from-orange-500 to-orange-400 text-white px-6 py-2 rounded-full font-semibold hover:from-orange-600 hover:to-orange-500 transition-all group">
-                          VIEW DETAIL
-                          <ChevronRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
-                        </button>
+                        <h4 className="text-2xl font-bold text-[#002B5B]">
+                          {service.title}
+                        </h4>
                       </div>
+                      <p className="text-gray-600 mb-6 line-clamp-3">
+                        {service.description}
+                      </p>
+                      <button className="inline-flex items-center bg-gradient-to-r from-orange-500 to-orange-400 text-white px-6 py-2 rounded-full font-semibold hover:from-orange-600 hover:to-orange-500 transition-all group">
+                        VIEW DETAIL
+                        <ChevronRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
+                      </button>
                     </div>
                   </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Navigation Buttons */}
+                </motion.div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
           <div className="flex justify-center mt-12 gap-4">
             <button
-              onClick={prevSlide}
-              disabled={isAnimating}
-              className="p-2 rounded-full bg-[#002B5B] text-white hover:bg-[#003B7B] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="prev-button p-2 rounded-full bg-[#002B5B] text-white hover:bg-[#003B7B] transition-colors"
               aria-label="Previous slide"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
-              onClick={nextSlide}
-              disabled={isAnimating}
-              className="p-2 rounded-full bg-[#002B5B] text-white hover:bg-[#003B7B] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="next-button p-2 rounded-full bg-[#002B5B] text-white hover:bg-[#003B7B] transition-colors"
               aria-label="Next slide"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
-
-export default AllServices2;

@@ -75,3 +75,52 @@ body {
 .text-stroke-orange {
   -webkit-text-stroke: 1px #f97316; 
 }
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.translate-z--100 {
+  transform: translateZ(-100px);
+}
+
+.translate-z-50 {
+  transform: translateZ(50px);
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px) translateZ(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateZ(50px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out forwards;
+}
+
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animate-delay-400 {
+  animation-delay: 400ms;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
