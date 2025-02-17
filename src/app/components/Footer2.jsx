@@ -178,7 +178,7 @@ const community = [
 export default function Footer2() {
   return (
     <>
-      <section className="relative bg-[#FF9B3E] py-4 mt-24 md:mt-48 overflow-hidden">
+      <section className="relative bg-[#FF9B3E] py-4 mt-24 md:mt-48 ">
         <motion.div
           className="px-4"
           initial={{ opacity: 0 }}
@@ -186,7 +186,7 @@ export default function Footer2() {
           viewport={{ once: true }}
         >
           <motion.div
-            className="absolute right-1/2 bottom-0 w-full md:w-1/3 mb-6 md:mb-0"
+            className="absolute right-1/2 bottom-0 w-full md:w-1/3 mb-6 md:mb-0 overflow-hidden"
             initial={{ x: 100 }}
             whileInView={{ x: 0 }}
             viewport={{ once: true }}
