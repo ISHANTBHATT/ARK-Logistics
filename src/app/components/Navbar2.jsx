@@ -156,6 +156,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import Image from "next/image";
 
 export function Navbar2() {
   const [scrolled, setScrolled] = React.useState(false);
@@ -232,15 +233,35 @@ export function Navbar2() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span
-              className={cn(
-                "text-2xl font-bold",
-                scrolled ? "text-gray-900" : "text-white"
-              )}
-            >
-              ARK Logistics<span className="text-[#FF5C28] px-2">&</span>
-              Maritime
-            </span>
+            {scrolled ? (
+              <>
+                <Image
+                  src="/images/logo.png"
+                  alt="Ark"
+                  width={1000}
+                  height={1000}
+                  className="w-20 h-20"
+                />
+              </>
+            ) : (
+              <>
+                <Image
+                  src="/images/logo2.png"
+                  alt="Ark"
+                  width={1000}
+                  height={1000}
+                  className="w-28 h-20"
+                />
+                <span
+                  className={cn(
+                    "text-2xl font-bold",
+                    scrolled ? "text-gray-600" : "text-gray-200"
+                  )}
+                >
+                  NALA SHIPPING
+                </span>
+              </>
+            )}
           </Link>
 
           {/* Desktop Navigation */}
