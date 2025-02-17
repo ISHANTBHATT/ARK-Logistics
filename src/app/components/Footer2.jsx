@@ -178,7 +178,7 @@ const community = [
 export default function Footer2() {
   return (
     <>
-      <section className="relative bg-[#FF9B3E] py-4 mt-24 md:mt-48  ">
+      <section className="relative bg-[#228186] py-4 mt-24 md:mt-48  ">
         <motion.div
           className="px-4"
           initial={{ opacity: 0 }}
@@ -207,7 +207,7 @@ export default function Footer2() {
               whileInView={{ x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-[#002B5B] text-2xl md:text-4xl font-bold mb-4 md:mb-6">
+              <h2 className="text-white text-2xl md:text-4xl font-bold mb-4 md:mb-6">
                 Subscribe for offers
                 <br />
                 and news
@@ -216,9 +216,9 @@ export default function Footer2() {
                 <input
                   type="email"
                   placeholder="Enter Your Email"
-                  className="flex-1 px-4 py-2 md:py-3 rounded-md text-sm md:text-base"
+                  className="flex-1 px-4 py-2 md:py-3 rounded-xl text-sm md:text-base"
                 />
-                <button className="bg-[#002B5B] text-white px-6 py-2 md:px-8 md:py-3 rounded-md hover:bg-[#001B3B] text-sm md:text-base">
+                <button className="bg-[#545454] text-white px-6 py-2 md:px-8 md:py-3 rounded-xl hover:bg-[#3E3E3E] text-sm md:text-base">
                   Subscribe Now
                 </button>
               </div>
@@ -227,7 +227,7 @@ export default function Footer2() {
         </motion.div>
       </section>
 
-      <footer className="bg-[#002B5B] text-white pt-8 md:pt-16 pb-8">
+      <footer className="bg-[#545454] text-white pt-8 md:pt-16 pb-8">
         <div className="container mx-auto px-4">
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12"
@@ -237,7 +237,7 @@ export default function Footer2() {
           >
             <div>
               <Image
-                src="/images/logo.png"
+                src="/images/Logo_White.png"
                 alt="Ark"
                 width={200}
                 height={60}
@@ -256,7 +256,7 @@ export default function Footer2() {
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
                     href="#"
-                    className="w-10 h-10 bg-[#003B7B] rounded flex items-center justify-center hover:bg-[#FF9B3E] transition-colors"
+                    className="w-10 h-10 bg-[#228186] rounded flex items-center justify-center hover:bg-[#1A6266] transition-colors"
                   >
                     <Icon className="w-5 h-5" />
                   </motion.a>
@@ -277,7 +277,7 @@ export default function Footer2() {
                   >
                     <a
                       href={link.href}
-                      className="text-gray-300 hover:text-[#FF9B3E]"
+                      className="text-gray-300 hover:text-teal-500"
                     >
                       {link.title}
                     </a>
@@ -299,7 +299,7 @@ export default function Footer2() {
                   >
                     <a
                       href={service.href}
-                      className="text-gray-300 hover:text-[#FF9B3E]"
+                      className="text-gray-300 hover:text-teal-500"
                     >
                       {service.title}
                     </a>
@@ -321,7 +321,7 @@ export default function Footer2() {
                   >
                     <a
                       href={item.href}
-                      className="text-gray-300 hover:text-[#FF9B3E]"
+                      className="text-gray-300 hover:text-teal-500"
                     >
                       {item.title}
                     </a>

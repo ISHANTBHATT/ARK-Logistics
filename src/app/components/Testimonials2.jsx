@@ -224,7 +224,7 @@ const logos = [
 
 function Testimonials2() {
   return (
-    <div className="h-full bg-[#2196f3] flex items-center justify-center p-4 md:p-8 lg:p-14">
+    <div className="h-full bg-[#228186] flex items-center justify-center p-4 md:p-8 lg:p-14">
       <motion.div
         className="relative w-full bg-white rounded-lg p-8 md:p-20 flex items-center justify-center"
         style={{ backgroundImage: "url('/images/bg-6.jpg')" }}
@@ -274,10 +274,10 @@ function Testimonials2() {
               </motion.div>
             </SwiperSlide>
           ))}
-          <button className="swiper-button-prev absolute left-0 top-1/2 transform -translate-y-1/2 z-10">
-            <ChevronLeft className="w-8 h-8 text-gray-400" />
+          <button className="swiper-button-prev absolute left-0 top-1/2 transform -translate-y-1/2 z-10 !text-[#228186]">
+            <ChevronLeft className="w-8 h-8 text-[gray-400]" />
           </button>
-          <button className="swiper-button-next absolute right-0 top-1/2 transform -translate-y-1/2 z-10">
+          <button className="swiper-button-next absolute right-0 top-1/2 transform -translate-y-1/2 z-10 !text-[#228186]">
             <ChevronRight className="w-8 h-8 text-gray-400" />
           </button>
         </Swiper>

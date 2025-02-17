@@ -220,14 +220,14 @@ export default function Service2() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex items-center text-left bg-white"
+              className="flex items-center text-left bg-white hover:shadow-lg hover:shadow-[#228186]"
             >
-              <div className="w-2 h-24 bg-[#FF9B3E] mr-4"></div>
+              <div className="w-2 h-24 bg-[#228186] mr-4"></div>
               <div className="flex p-4 gap-4 items-center">
-                <service.icon className="w-16 h-16 text-[#0066FF]" />
+                <service.icon className="w-16 h-16 text-[#228186] " />
                 <div className="flex-col items-center gap-4 mb-2 py-6">
                   <h3 className="text-xl font-bold text-[#002B5B]">
-                    <span className="text-[#FF9B3E] text-2xl font-bold">
+                    <span className="text-[#228186] text-2xl font-bold">
                       {service.number}.
                     </span>{" "}
                     {service.title}

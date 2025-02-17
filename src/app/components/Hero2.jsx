@@ -124,7 +124,7 @@ export default function Hero2() {
               className="object-cover rounded-lg"
             />
           </div>
-          <div className="absolute top-10 h-[400px] md:h-[440px] w-64 md:w-80 z-10 left-12 md:left-20 bg-white shadow-2xl shadow-blue-500"></div>
+          <div className="absolute top-10 h-[400px] md:h-[440px] w-64 md:w-80 z-10 left-12 md:left-20 bg-white shadow-2xl shadow-[#228186]"></div>
           <div className="absolute -bottom-20 md:-bottom-32 right-0 h-full w-72 md:w-96 z-1">
             <Image
               src="/images/pic4.jpg"
@@ -141,7 +141,7 @@ export default function Hero2() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-[#FF9B3E] mb-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-2 text-stroke-orange">
             WHY CHOOSE US
           </h2>
           <h3 className="text-2xl md:text-5xl font-bold text-[#002B5B] mb-6">
@@ -161,7 +161,7 @@ export default function Hero2() {
             explicabo.
           </p>
           <div className="flex items-center gap-8">
-            <button className="bg-[#FF9B3E] text-white px-6 py-2 md:px-8 md:py-3 rounded-lg hover:bg-[#002B5B] transition-colors text-sm md:text-base">
+            <button className="bg-[#228186] text-white px-6 py-2 md:px-8 md:py-3 rounded-xl hover:bg-[#1A6266] transition-colors text-sm md:text-base">
               Learn More
             </button>
           </div>

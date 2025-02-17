@@ -182,6 +182,26 @@ import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 
 export default function Company2() {
+  const approch = [
+    {
+      id: 1,
+      number: "195",
+      title: "Professional Staff",
+      image: "/images/c-pic1.png",
+    },
+    {
+      id: 2,
+      number: "250",
+      title: "On Time Delivery",
+      image: "/images/c-pic2.png",
+    },
+    {
+      id: 3,
+      number: "350",
+      title: "Technology and Media",
+      image: "/images/c-pic3.png",
+    },
+  ];
   return (
     <main className="min-h-screen py-10 md:py-20 px-4 lg:px-40">
       <section className="relative">
@@ -199,7 +219,7 @@ export default function Company2() {
             transition={{ duration: 0.8 }}
             className="space-y-4"
           >
-            <h2 className="text-[#FFA500] text-xl md:text-2xl font-light">
+            <h2 className="text-[#228186] text-xl md:text-2xl font-light">
               COMPANY APPROACH
             </h2>
             <h1 className="text-3xl md:text-5xl font-bold text-[#003366] leading-tight">
@@ -213,7 +233,7 @@ export default function Company2() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <Button className="bg-[#FF8C00] hover:bg-[#FF7000] text-white px-6 py-4 md:px-8 md:py-6">
+            <Button className="bg-[#228186] hover:bg-[#1A6266] text-white px-6 py-4 md:px-8 md:py-6 rounded-xl">
               Read More
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
@@ -256,12 +276,12 @@ export default function Company2() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="absolute top-0 right-0 w-40 md:w-60 h-full bg-[#FF8C00] -z-10" />
-            <Card className="bg-white p-4 md:p-8 relative z-10 w-full max-w-[500px] md:mr-20 shadow-2xl shadow-blue-500">
+            <div className="absolute top-0 right-0 w-40 md:w-60 h-full bg-[#228186] -z-10" />
+            <Card className="bg-white p-4 md:p-8 relative z-10 w-full max-w-[500px] md:mr-20 shadow-2xl shadow-[#228186]">
               <div className="space-y-4 md:space-y-8">
-                {[195, 250, 350].map((num, idx) => (
+                {approch.map((item, idx) => (
                   <motion.div
-                    key={num}
+                    key={item.i}
                     className="flex items-center gap-4"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -270,26 +290,20 @@ export default function Company2() {
                   >
                     <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-100 rounded-full flex items-center justify-center">
                       <Image
-                        src="/placeholder.svg"
+                        src={item.image}
                         alt="Icon"
-                        width={24}
-                        height={24}
-                        className="w-4 h-4 md:w-6 md:h-6"
+                        width={1000}
+                        height={1000}
+                        className="w-full h-full"
                       />
                     </div>
                     <div>
-                      <h3 className="text-2xl md:text-4xl font-bold text-[#FF8C00]">
-                        {num}
+                      <h3 className="text-2xl md:text-4xl font-bold text-[#228186]">
+                        {item.number}
                         <span className="text-xl md:text-3xl">+</span>
                       </h3>
                       <p className="text-[#003366] text-sm md:text-base font-semibold">
-                        {
-                          [
-                            "Professional Staff",
-                            "On Time Delivery",
-                            "Technology and Media",
-                          ][idx]
-                        }
+                        {item.title}
                       </p>
                     </div>
                   </motion.div>

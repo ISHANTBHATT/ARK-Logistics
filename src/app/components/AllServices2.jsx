@@ -1189,7 +1189,7 @@ export default function AllServices() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.8 }}
-            className="text-4xl font-bold tracking-tight bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent mb-4"
+            className="text-5xl font-bold tracking-tight text-white bg-clip-text text-transparent mb-4 text-stroke-orange"
           >
             ALL SERVICES
           </motion.h2>
@@ -1245,15 +1245,15 @@ export default function AllServices() {
                   transition={{ duration: 0.5 }}
                   className="py-2"
                 >
-                  <div className="relative overflow-hidden group rounded-xl p-8 transition-all duration-300 border border-gray-200 hover:shadow-xl hover:border-orange-300 bg-white hover:-translate-y-2 h-full">
-                    <div className="absolute top-0 right-0 w-32 h-32 -mr-16 -mt-16 bg-gradient-to-r from-orange-100 to-orange-200 rounded-full opacity-20 group-hover:opacity-30 transition-opacity" />
+                  <div className="relative overflow-hidden group rounded-xl p-8 transition-all duration-300 border border-gray-200 hover:shadow-xl hover:border-[#228186] bg-white hover:-translate-y-2 h-full">
+                    <div className="absolute top-0 right-0 w-32 h-32 -mr-16 -mt-16 bg-[#228186]/20 rounded-full opacity-20 group-hover:opacity-30 transition-opacity" />
                     <div className="relative">
-                      <span className="text-5xl font-bold text-orange-500/20 mb-4 block transition-transform duration-300 group-hover:-translate-y-2">
+                      <span className="text-5xl font-bold text-[#228186]/20 mb-4 block transition-transform duration-300 group-hover:-translate-y-2">
                         {service.id}
                       </span>
                       <div className="flex items-center mb-4">
-                        <div className="p-3 bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl mr-4 shadow-md">
-                          <service.icon className="w-8 h-8 text-orange-600" />
+                        <div className="p-3 bg-[#228186]/20 rounded-xl mr-4 shadow-md">
+                          <service.icon className="w-8 h-8 text-[#228186]" />
                         </div>
                         <h4 className="text-2xl font-bold text-[#002B5B]">
                           {service.title}
@@ -1262,7 +1262,7 @@ export default function AllServices() {
                       <p className="text-gray-600 mb-6 line-clamp-3">
                         {service.description}
                       </p>
-                      <button className="inline-flex items-center bg-gradient-to-r from-orange-500 to-orange-400 text-white px-6 py-2 rounded-full font-semibold hover:from-orange-600 hover:to-orange-500 transition-all group">
+                      <button className="inline-flex items-center bg-gradient-to-r from-[#1A6266] to-[#228186] text-white px-6 py-2 rounded-full font-semibold hover:from-teal-800 hover:to-[#1A6266] transition-all group">
                         VIEW DETAIL
                         <ChevronRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
                       </button>
@@ -1274,13 +1274,13 @@ export default function AllServices() {
           </Swiper>
           <div className="flex justify-center mt-12 gap-4">
             <button
-              className="prev-button p-2 rounded-full bg-[#002B5B] text-white hover:bg-[#003B7B] transition-colors"
+              className="prev-button p-2 rounded-full bg-[#228186] text-white hover:bg-[#1A6266] transition-colors"
               aria-label="Previous slide"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
-              className="next-button p-2 rounded-full bg-[#002B5B] text-white hover:bg-[#003B7B] transition-colors"
+              className="next-button p-2 rounded-full bg-[#228186] text-white hover:bg-[#1A6266] transition-colors"
               aria-label="Next slide"
             >
               <ChevronRight className="w-6 h-6" />

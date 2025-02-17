@@ -219,7 +219,7 @@ export function Navbar2() {
               </div>
               <Button
                 variant="destructive"
-                className="bg-orange-500 hover:bg-orange-600 rounded-xl"
+                className="bg-orange-500 hover:bg-orange-600 rounded-xl text-white/80"
               >
                 Contact
               </Button>
@@ -252,12 +252,7 @@ export function Navbar2() {
                   height={1000}
                   className="w-28 h-20"
                 />
-                <span
-                  className={cn(
-                    "text-2xl font-bold",
-                    scrolled ? "text-gray-600" : "text-gray-200"
-                  )}
-                >
+                <span className="text-2xl font-bold text-white/80">
                   NALA SHIPPING
                 </span>
               </>
