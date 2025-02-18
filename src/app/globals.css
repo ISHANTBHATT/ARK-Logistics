@@ -124,3 +124,31 @@ body {
   animation: scroll 20s linear infinite;
 }
 
+.shine-mask {
+  -webkit-mask-image: linear-gradient(45deg, #000 25%, rgba(0, 0, 0, 0.2) 50%, #000 75%);
+  mask-image: linear-gradient(45deg, #000 25%, rgba(0, 0, 0, 0.2) 50%, #000 75%);
+  -webkit-mask-size: 800%;
+  mask-size: 800%;
+  -webkit-mask-position: 0;
+  mask-position: 0;
+  transition: mask-position 1s ease, -webkit-mask-position 1s ease;
+}
+
+.shine-mask:hover {
+  -webkit-mask-position: 120%;
+  mask-position: 120%;
+}
+/* @layer components {
+  .group:hover .shine-overlay {
+    animation: shine 1.5s;
+  }
+
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%) rotate(45deg);
+    }
+    100% {
+      transform: translateX(100%) rotate(45deg);
+    }
+  }
+} */

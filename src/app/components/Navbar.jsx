@@ -134,17 +134,15 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Waves as Wave, Phone, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
 export function Navbar() {
-  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 650) {
+      if (window.scrollY > 400) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -156,8 +154,6 @@ export function Navbar() {
     };
   }, []);
 
-  const isHomePage = pathname === "/";
-
   return (
     <motion.nav
       initial={{ opacity: 0, y: -50 }}
@@ -165,9 +161,7 @@ export function Navbar() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
       className={`w-full fixed top-0 z-50 ${
-        isScrolled || !isHomePage
-          ? "bg-[#006957]/80 "
-          : "bg-transparent text-white"
+        isScrolled ? "bg-[#006957]/80 " : "bg-transparent text-white"
       }`}
     >
       <div className="flex items-center justify-between px-8 py-6">
@@ -189,19 +183,19 @@ export function Navbar() {
           viewport={{ once: true }}
           className="flex items-center space-x-8 text-white"
         >
-          <a href="#" className="hover:text-gray-300">
+          <a href="/" className="hover:text-gray-300">
             Home
           </a>
-          <a href="#" className="hover:text-gray-300">
+          <a href="/about" className="hover:text-gray-300">
             About
           </a>
-          <a href="#" className="hover:text-gray-300">
+          <a href="/services" className="hover:text-gray-300">
             Services
           </a>
-          <a href="#" className="hover:text-gray-300">
+          <a href="/clients" className="hover:text-gray-300">
             Clients
           </a>
-          <a href="#" className="hover:text-gray-300">
+          <a href="/career" className="hover:text-gray-300">
             Career
           </a>
           <button className="bg-white text-black px-4 py-2 rounded-full flex items-center">

@@ -186,7 +186,7 @@ export default function Footer2() {
           viewport={{ once: true }}
         >
           <motion.div
-            className="absolute right-1/2 bottom-0 w-full md:w-1/3 mb-6 md:mb-0"
+            className="absolute right-1/2 bottom-0 w-full md:w-1/3 mb-6 md:mb-0 z-0"
             initial={{ x: 100 }}
             whileInView={{ x: 0 }}
             viewport={{ once: true }}
@@ -212,7 +212,7 @@ export default function Footer2() {
                 <br />
                 and news
               </h2>
-              <div className="flex flex-col md:flex-row gap-4">
+              <div className="flex flex-col md:flex-row gap-4 z-10">
                 <input
                   type="email"
                   placeholder="Enter Your Email"
