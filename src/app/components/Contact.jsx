@@ -79,6 +79,7 @@
 import React from "react";
 import { MapPin, Phone, Mail, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 // Animation variants
 const containerVariants = {
@@ -113,8 +114,8 @@ const Contact = () => {
         <motion.div variants={itemVariants}>
           <h2 className="text-5xl font-bold mb-6">Get In Touch</h2>
           <p className="text-gray-600 mb-12">
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classic random text.
+            The team at ARK Logistics & Maritime is eager to discuss all your
+            cargo and shipping needs.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -123,46 +124,49 @@ const Contact = () => {
               <div className="space-y-2">
                 <p className="flex items-center gap-2">
                   <MapPin className="w-5 h-5 lg:w-8 lg:h-8" />
-                  612-7 Roanoke Rd, Toronto, ON M3A 1E3, Canada
+                  ARK Logistics & Maritime Dubai, UAE
                 </p>
                 <p className="flex items-center gap-2">
-                  <Phone className="w-5 h-5" />
-                  +1-416-8241228
+                  <Phone className="w-6 h-6" />
+                  +971 50 1898269
                 </p>
                 <p className="flex items-center gap-2">
-                  <Mail className="w-5 h-5" />
-                  info@email.com
+                  <Mail className="w-6 h-6" />
+                  director@ark-maritime.com
                 </p>
               </div>
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <h3 className="text-xl font-semibold mb-4">Canada Office</h3>
+              <h3 className="text-xl font-semibold mb-4">
+                REPRESENTATION OFFICE
+              </h3>
               <div className="space-y-2">
                 <p className="flex items-center gap-2">
                   <MapPin className="w-5 h-5 lg:w-8 lg:h-8" />
-                  612-7 Roanoke Rd, Toronto, ON M3A 1E3, Canada
+                  U.K | U.S.A and Australia
                 </p>
-                <p className="flex items-center gap-2">
+                {/* <p className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
                   +1-416-8241228
                 </p>
                 <p className="flex items-center gap-2">
                   <Mail className="w-5 h-5" />
                   info@email.com
-                </p>
+                </p> */}
               </div>
             </motion.div>
           </div>
-
-          <motion.button
-            className="mt-8 bg-red-600 text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-red-700 transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5" />
-          </motion.button>
+          <Link href="/contact">
+            <motion.button
+              className="mt-8 bg-red-600 text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-red-700 transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Contact Us
+              <ArrowRight className="w-5 h-5" />
+            </motion.button>
+          </Link>
         </motion.div>
 
         <motion.div className="relative" variants={itemVariants}>
@@ -175,9 +179,7 @@ const Contact = () => {
             className="absolute bottom-8 left-8 bg-teal-800 text-white p-4 rounded-lg max-w-xs"
             whileHover={{ scale: 1.1 }}
           >
-            <p className="text-sm">
-              612-7 Roanoke Rd, Toronto, ON M3A 1E3, Canada
-            </p>
+            <p className="text-sm">ARK Logistics & Maritime Dubai, UAE</p>
           </motion.div>
         </motion.div>
       </div>

@@ -177,6 +177,7 @@ import {
   Instagram,
   MoveDown,
 } from "lucide-react";
+import Link from "next/link";
 
 // Animation variants
 const containerVariants = {
@@ -231,7 +232,7 @@ export function Banner() {
               transition={{ duration: 0.8 }}
               className="inline-block bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-6"
             >
-              Your Home By The Sea
+              Specialized Logistics and Maritime Solutions
             </motion.div>
 
             <motion.h1
@@ -240,16 +241,16 @@ export function Banner() {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="text-6xl font-semibold text-white mb-4"
             >
-              Surrender to Waves
+              ARK Logistics &
             </motion.h1>
 
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
-              className="text-5xl font-semibold text-white mb-8"
+              className="text-6xl font-semibold text-white mb-8"
             >
-              Discover the Shore
+              Maritime
             </motion.h2>
 
             <motion.div
@@ -258,28 +259,34 @@ export function Banner() {
               animate="visible"
               className="flex space-x-4"
             >
-              <motion.button
-                variants={itemVariants}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-white text-black px-6 py-3 rounded-full flex items-center hover:bg-gray-100"
-              >
-                Sea View Rentals <ArrowUpRight className="w-4 h-4 ml-2" />
-              </motion.button>
-              <motion.button
-                variants={itemVariants}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-white text-black px-6 py-3 rounded-full flex items-center hover:bg-gray-100"
-              >
-                Build a house <ArrowUpRight className="w-4 h-4 ml-2" />
-              </motion.button>
+              <Link href="/about">
+                <motion.button
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-white text-black px-6 py-3 rounded-full flex items-center hover:bg-gray-100"
+                >
+                  About us
+                  <ArrowUpRight className="w-4 h-4 ml-2" />
+                </motion.button>
+              </Link>
+              <Link href="/contact">
+                <motion.button
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-white text-black px-6 py-3 rounded-full flex items-center hover:bg-gray-100"
+                >
+                  Contact us
+                  <ArrowUpRight className="w-4 h-4 ml-2" />
+                </motion.button>
+              </Link>
             </motion.div>
           </div>
         </main>
 
         {/* Footer */}
-        <div className="absolute bottom-8 w-full px-8">
+        {/* <div className="absolute bottom-8 w-full px-8">
           <div className="flex items-center text-white">
             <div className="flex space-x-8">
               <motion.div
@@ -302,7 +309,7 @@ export function Banner() {
               </motion.div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Social Links */}
         <motion.div

@@ -263,28 +263,33 @@ import React, { useRef, useEffect, useState } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const services = [
   {
-    title: "End-to-End Delivery",
+    title: "Consultancy",
+    slug: "consultancy",
     description:
       "Contrary to popular belief, Lorem Ipsum is not simply random text.",
     hoverImage: "/images/s1.jpg",
   },
   {
-    title: "Priority Air Freight",
+    title: "Agency",
+    slug: "agency",
     description:
       "Contrary to popular belief, Lorem Ipsum is not simply random text.",
     hoverImage: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05",
   },
   {
-    title: "Express Air Freight",
+    title: "Green Crew Change",
+    slug: "green-crew-change",
     description:
       "Contrary to popular belief, Lorem Ipsum is not simply random text.",
     hoverImage: "/images/s4.jpg",
   },
   {
-    title: "Warehousing",
+    title: "Cargo",
+    slug: "cargo",
     description:
       "Contrary to popular belief, Lorem Ipsum is not simply random text.",
     hoverImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d",
@@ -333,14 +338,16 @@ function ServiceCard({ service, index }) {
         transition={{ duration: 0.3 }}
       >
         <h3 className="text-3xl font-bold mb-3">{service.title}</h3>
-        <p className="text-gray-200 mb-4">{service.description}</p>
-        <motion.button
-          className="flex items-center gap-2 text-white font-medium group/btn"
-          whileHover={{ x: 5 }}
-        >
-          Read More
-          <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1" />
-        </motion.button>
+        {/* <p className="text-gray-200 mb-4">{service.description}</p> */}
+        <Link href={`/services/${service.slug}`}>
+          <motion.button
+            className="flex items-center gap-2 text-white font-medium group/btn"
+            whileHover={{ x: 5 }}
+          >
+            Read More
+            <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1" />
+          </motion.button>
+        </Link>
       </motion.div>
     </motion.div>
   );
@@ -359,17 +366,16 @@ function ServiceGrid() {
   }, [controls, inView]);
 
   useEffect(() => {
-    // Calculate the height of the background image container dynamically
     const calculateBackgroundHeight = () => {
       const numServices = services.length;
       let numColumns;
 
       if (window.innerWidth < 768) {
-        numColumns = 1; // 1 column on mobile
+        numColumns = 1;
       } else if (window.innerWidth < 1024) {
-        numColumns = 2; // 2 columns on medium screens
+        numColumns = 2;
       } else {
-        numColumns = 4; // 4 columns on large screens
+        numColumns = 4;
       }
 
       const numRows = Math.ceil(numServices / numColumns);

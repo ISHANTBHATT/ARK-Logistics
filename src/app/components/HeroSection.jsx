@@ -128,6 +128,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Plane, Truck, Ship, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
 
 export function HeroSection() {
   return (
@@ -143,46 +144,47 @@ export function HeroSection() {
           {/* Land Freight */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="p-16 border group hover:shadow-lg transition-shadow"
+            className="p-10 border group hover:shadow-lg transition-shadow"
           >
             <div className="flex gap-4 items-center">
               <Truck className="w-12 h-12 text-red-600 mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Land Freight Services</h3>
+              <h3 className="text-2xl font-bold mb-4">Consulting</h3>
             </div>
             <p className="text-gray-600">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
+              The ARK team brings extensive expertise in Liner Shipping, Ports &
+              Terminals, Digitalization in Shipping, and Vessel Agency that can
+              be utilized for your organization.
             </p>
           </motion.div>
 
           {/* Ocean Freight */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="p-16 border hover:shadow-lg transition-shadow"
+            className="p-10 border hover:shadow-lg transition-shadow"
           >
             <div className="flex gap-4 items-center">
               <Ship className="w-12 h-12 text-red-600 mb-4" />
-              <h3 className="text-2xl font-bold mb-4">
-                Ocean Freight Solutions
-              </h3>
+              <h3 className="text-2xl font-bold mb-4">Vessels</h3>
             </div>
             <p className="text-gray-600">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
+              Our extensive presence and coverage across the Middle East and
+              Africa guarantee that your vessel and crew are secure in any port
+              of call.
             </p>
           </motion.div>
 
           {/* Air Cargo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="p-16 border hover:shadow-lg transition-shadow"
+            className="p-10 border hover:shadow-lg transition-shadow"
           >
             <div className="flex gap-4 items-center">
               <Plane className="w-12 h-12 text-red-600 mb-4" />
-              <h3 className="text-2xl font-bold mb-4">
-                Air Cargo Transportation
-              </h3>
+              <h3 className="text-2xl font-bold mb-4">Cargo</h3>
             </div>
             <p className="text-gray-600">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
+              Whether you need to ship in single container loads or in bulk, we
+              offer comprehensive solutions for all your supply chain needs.
             </p>
           </motion.div>
         </div>
@@ -210,25 +212,27 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="lg:pt-40 px-6 w-full lg:w-1/2">
+        <div className="pb-4 lg:pt-40 px-6 w-full lg:w-1/2">
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-black">
-              Drive Your Business Forward with LogiHub
+            <h1 className="text-4xl md:text-4xl font-bold mb-6 text-black">
+              Propel Your Business Ahead with ARK Logistics & Maritime.
             </h1>
-            <p className="text-gray-600 text-lg mb-4">
+            {/* <p className="text-gray-600 text-lg mb-4">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              className="bg-red-600 text-white px-8 py-3 rounded-full hover:bg-red-700 transition-colors"
-            >
-              Read More
-            </motion.button>
+            </p> */}
+            <Link href="/about">
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                className="bg-red-600 text-white px-8 py-3 rounded-full hover:bg-red-700 transition-colors"
+              >
+                Read More
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </motion.div>

@@ -14,17 +14,17 @@ import Footer from "./Footer";
 function Homepage() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Banner />
       <HeroSection />
-      <Stats />
+      {/* <Stats /> */}
       <ServiceGrid />
       <WhyChoose />
       <VideoCarousel />
-      <Team />
-      <Testimonials />
+      {/* <Team /> */}
+      {/* <Testimonials /> */}
       <Contact />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

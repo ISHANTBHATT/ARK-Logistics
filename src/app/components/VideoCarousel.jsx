@@ -6,17 +6,17 @@ const videos = [
   {
     id: 1,
     url: "videos/1.mp4",
-    title: "Global Shipping Solutions",
+    title: "Consultancy",
   },
   {
     id: 2,
     url: "videos/2.mp4",
-    title: "Maritime Excellence",
+    title: "Vessel",
   },
   {
     id: 3,
     url: "videos/4.mp4",
-    title: "Logistics Innovation",
+    title: "Cargo",
   },
 ];
 

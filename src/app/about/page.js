@@ -12,12 +12,10 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
 const features = [
-  "Go beyond logistics, make the world go round and revolutionize business.",
-  "Logistics through innovation, dedication, and technology. ready, set, done.",
-  "We take pride in serving our customers safely, together with passion.",
-  "Imagination what we can easily see is only a small percentage.",
-  "Quality never goes out of style. safety, quality, professionalism.",
-  "The quality shows in every move we make where business lives.",
+  "Exceptional service tailored to meet the unique needs of each client.",
+  "Experienced team of professionals ensures timely and efficient transportation solutions.",
+  "Cutting-edge technology and industry expertise to offer reliable and cost-effective logistics options.",
+  "Commitment to sustainability and adherence to the highest safety standards set us apart as a leader in the industry.",
 ];
 
 const logos = [
@@ -78,10 +76,10 @@ const Page = () => {
                   </div> */}
                 </div>
 
-                <div className="bg-[#004041] absolute -bottom-10 right-10 bg-navy-900 text-white p-8 rounded-lg">
-                  <div className="text-5xl font-bold text-orange-500">295+</div>
-                  <div className="text-xl mt-2">Branches</div>
-                  <div className="text-sm text-gray-400">Since 1996</div>
+                <div className="bg-[#004041] absolute -bottom-10 right-20 bg-navy-900 text-white p-8 rounded-lg flex flex-col items-center">
+                  <div className="text-5xl font-bold text-orange-500">3+</div>
+                  <div className="text-xl mt-2">Continents</div>
+                  {/* <div className="text-sm text-gray-400">Since 1996</div> */}
                 </div>
               </div>
             </div>
@@ -91,11 +89,23 @@ const Page = () => {
                 ABOUT US
               </h2>
               <h3 className="text-4xl font-bold text-gray-900 mb-6">
-                We Are Professional Logistics & Cargo Agency
+                Why Choose ARK Logistics & Maritime
               </h3>
               <p className="text-gray-600 mb-8">
-                Sed ut perspiciatis unde omnis iste natus error volup tatem
-                accusantium dolorem que laudantium, totam inventore.
+                ARK Logistics & Maritime is a collaboration of like-minded
+                professionals who recognized the need for professional and
+                dependable services in the region. The team boasts a robust
+                background in cargo and ocean-related activities, along with a
+                powerful network in the area that can be effectively utilized.
+              </p>
+              <p className="text-gray-600 mb-8">
+                With experience in corporate settings, the team possesses both
+                the vision and the capability to execute plans, positioning ARK
+                L&M for a successful future. They have significant experience
+                working with top-tier companies, including major liner,
+                logistics, and maritime service providers. Additionally, the
+                team is well-versed in handling bulk commodities, RO-RO
+                shipments, project cargoes, and containers.
               </p>
 
               <div className="space-y-4">
@@ -107,39 +117,40 @@ const Page = () => {
                 ))}
               </div>
 
-              <button
+              {/* <button
                 className="mt-8 px-8 py-3 bg-orange-500 text-white font-semibold rounded-xl 
               hover:bg-orange-600 transition-colors duration-300"
               >
                 Learn More
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
       </section>
 
-      <div className="min-h-screen overflow-hidden bg-white p-2 md:p-20 flex flex-col justify-center gap-20">
+      <div className="h-full overflow-hidden bg-white p-2 md:p-20 flex flex-col justify-center gap-20">
         {/* Design with Rounded Rectangles */}
         <div className="max-w-4xl mx-auto mb-16">
           <div className="relative">
             <div className="absolute -left-20 -bottom-10 w-64 h-48 bg-orange-400 rounded-3xl transform "></div>
             <div className="absolute -right-10 -top-16 w-60 h-56 bg-orange-500 rounded-3xl transform "></div>
-            <div className="relative max-w-6xl bg-gradient-to-b from-teal-700 to-teal-600 rounded-3xl p-8 shadow-xl text-white">
+            <div className="relative w-full bg-gradient-to-b from-teal-700 to-teal-600 rounded-3xl p-8 shadow-xl text-white">
               <div className="flex items-center gap-2 mb-4">
                 <Target className="w-10 h-10 text-white" />
                 <h1 className="text-4xl font-bold">Mission</h1>
               </div>
               <h2 className="text-sm md:text-lg  mb-2">
-                To provide personalized and reliable maritime services that
-                exceed the expectations of our customers in the Middle East and
-                Africa. We are committed to delivering exceptional value through
-                our experienced team, innovative solutions, and strong
-                partnerships. We strive to build long-term relationships with
-                our customers and earn their trust by providing outstanding
-                service, responsiveness, and attention to detail. Our mission is
-                to be the partner of choice for our customers, and to
-                consistently deliver the highest level of quality and
-                reliability in all aspects of our operations.
+                Our goal is to offer personalized and dependable maritime
+                services that surpass the expectations of our clients in the
+                Middle East and Africa. We are dedicated to delivering
+                exceptional value through our skilled team, innovative
+                solutions, and robust partnerships. We aim to foster long-term
+                relationships with our customers, earning their trust by
+                providing outstanding service, responsiveness, and meticulous
+                attention to detail. Our mission is to become the preferred
+                partner for our clients, consistently ensuring the highest
+                standards of quality and reliability in every facet of our
+                operations.
               </h2>
             </div>
           </div>
@@ -148,16 +159,21 @@ const Page = () => {
         {/* Design with Circles */}
         <div className="max-w-4xl mx-auto">
           <div className="relative">
-            <div className="absolute -left-0 -bottom-10 w-64 h-64 bg-orange-400 rounded-full transform -translate-x-1/4"></div>
-            <div className="absolute -right-0 -top-10 w-56 h-56 bg-orange-500 rounded-full transform translate-x-1/4"></div>
-            <div className="relative max-w-xs text-white bg-gradient-to-b from-teal-700 to-teal-600  rounded-full p-8 shadow-xl aspect-square flex flex-col items-center justify-center text-center">
+            <div className="absolute -left-8 -bottom-14 w-56 h-56 bg-orange-400 rounded-full transform -translate-x-1/4"></div>
+            <div className="absolute -right-4 -top-16 w-56 h-56 bg-orange-500 rounded-full transform translate-x-1/4"></div>
+            <div className="relative w-full bg-gradient-to-b from-teal-700 to-teal-600 rounded-3xl p-8 shadow-xl text-white">
               <div className="flex items-center gap-2 mb-4">
                 <Eye className="w-10 h-10 text-white" />
                 <h1 className="text-3xl font-bold">Vision</h1>
               </div>
               <h2 className="text-lg  mb-2">
-                To be the partner of choice for Customers who need personalised
-                maritime services in the Middle East & Africa
+                Our goal is to become the preferred partner for customers
+                seeking personalized maritime services in the Middle East and
+                Africa.We strive to achieve this by continuously improving our
+                offerings and staying attuned to the evolving needs of the
+                industry. Our team is committed to innovation and excellence,
+                ensuring that every service we provide is tailored to meet the
+                unique requirements of our clients.
               </h2>
             </div>
           </div>
@@ -165,7 +181,7 @@ const Page = () => {
       </div>
 
       <Parallax />
-      <div className="flex flex-col pt-20  text-center">
+      {/* <div className="flex flex-col pt-20  text-center">
         <h2 className="text-5xl font-semibold text-red-500 mb-2">
           Our Clients
         </h2>
@@ -218,7 +234,7 @@ const Page = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </motion.div>
+      </motion.div> */}
     </>
   );
 };

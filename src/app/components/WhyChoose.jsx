@@ -126,25 +126,25 @@ export function WhyChoose() {
     {
       title: "Express Air Transport",
       description:
-        "Flexible and efficient road transportation across local and international routes.",
+        "Exceptional service tailored to meet the unique needs of each client.",
       icon: Plane,
     },
     {
       title: "Maximum Cargo Flexibility",
       description:
-        "Flexible and efficient road transportation across local and international routes.",
+        "Experienced team of professionals ensures timely and efficient transportation solutions.",
       icon: Package,
     },
     {
       title: "Personalized Shipping Solutions",
       description:
-        "Flexible and efficient road transportation across local and international routes.",
+        "Cutting-edge technology and industry expertise to offer reliable and cost-effective logistics options.",
       icon: Users,
     },
     {
       title: "Maximum Cargo Flexibility",
       description:
-        "Flexible and efficient road transportation across local and international routes.",
+        "Commitment to sustainability and adherence to the highest safety standards set us apart as a leader in the industry.",
       icon: Truck,
     },
   ];
@@ -165,7 +165,7 @@ export function WhyChoose() {
   };
 
   return (
-    <div className="h-full bg-white">
+    <div className="h-full bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: -100 }}
@@ -175,9 +175,9 @@ export function WhyChoose() {
           className="flex justify-between py-10"
         >
           <h1 className="text-2xl md:text-5xl font-bold leading-tight">
-            Why Choose Us for Your
+            Why Choose ARK
             <br />
-            Logistics Needs?
+            Logistics & Maritime
           </h1>
           <div className="flex items-center space-x-4">
             <a
@@ -218,7 +218,7 @@ export function WhyChoose() {
             viewport={{ once: true }}
           >
             <img
-              src="/images/container.png"
+              src="/images/ship.png"
               alt="Drone carrying cargo container"
               className="w-full h-full"
             />

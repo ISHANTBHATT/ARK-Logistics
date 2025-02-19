@@ -56,38 +56,36 @@ function Page() {
           <div>
             <h2 className="text-4xl font-bold mb-6">Get In Touch</h2>
             <p className="text-gray-600 mb-8">
-              If you have any questions to support your business, please contact
-              us directly effective search and believes business.
+              The team at ARK Logistics & Maritime is eager to discuss all your
+              cargo and shipping needs.
             </p>
 
             <div className="grid grid-cols-2 gap-8">
               <div>
                 <MapPinned className="w-8 h-8 text-red-600 mb-4" />
                 <h3 className="font-bold text-xl mb-2">Address</h3>
-                <p>837 Castle Hill Ave. Bronx NY</p>
-                <p>33195 United States</p>
+                <p>ARK Logistics &</p>
+                <p>Maritime Dubai, UAE</p>
               </div>
 
               <div>
                 <Phone className="w-8 h-8 text-red-600 mb-4" />
                 <h3 className="font-bold text-xl mb-2">Office Phone</h3>
-                <p>(+58) 123-456-7890</p>
-                <p>+1 718-625-2030</p>
+                <p>+971 50 1898269</p>
               </div>
 
               <div>
                 <MailOpen className="w-8 h-8 text-red-600 mb-4" />
                 <h3 className="font-bold text-xl mb-2">Email Address</h3>
-                <p>info@Cargoy.com</p>
-                <p>support@Cargoy.com</p>
+                <p>director@ark-maritime.com</p>
               </div>
 
-              <div>
+              {/* <div>
                 <Clock className="w-8 h-8 text-red-600 mb-4" />
                 <h3 className="font-bold text-xl mb-2">Working Hours</h3>
                 <p>(+58) 123-456-7890</p>
                 <p>+1 718-625-2030</p>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -169,21 +167,21 @@ function Page() {
         <div className="container mx-auto px-4 flex flex-wrap justify-around items-center gap-8">
           <div className="flex items-center gap-2">
             <Phone className="text-red-600 h-6 w-6" />
-            <span>(+58) 123-456-7890</span>
+            <span>+971 50 1898269</span>
           </div>
           <div className="flex items-center gap-2">
             <Mail className="text-red-600 h-6 w-6" />
-            <span>info@Cargoy.com</span>
+            <span>director@ark-maritime.com</span>
           </div>
           <div className="flex items-center gap-2">
             <MapPin className="text-red-600 h-6 w-6" />
-            <span>33195 NW 56th ST Miami, Florida</span>
+            <span>ARK Logistics & Maritime Dubai, UAE</span>
           </div>
         </div>
       </div>
 
       {/* Scroll to Top Button */}
-      <button
+      {/* <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className="fixed bottom-6 right-6 bg-red-600 text-white p-3 rounded-lg hover:bg-red-700 transition-colors"
       >
@@ -200,7 +198,7 @@ function Page() {
             d="M5 10l7-7m0 0l7 7m-7-7v18"
           />
         </svg>
-      </button>
+      </button> */}
     </div>
   );
 }
