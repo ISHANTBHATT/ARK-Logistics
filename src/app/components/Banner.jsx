@@ -216,7 +216,7 @@ export function Banner() {
       >
         <source src="videos/5.mp4" type="video/mp4" />
       </motion.video>
-
+      <div className="absolute inset-0  bg-gradient-to-b from-gray-100/30 to-transparent" />
       {/* Content Container */}
       <motion.div
         initial={{ opacity: 0 }}

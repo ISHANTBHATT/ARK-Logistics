@@ -199,9 +199,10 @@ export function HeroSection() {
         className="relative h-full flex flex-col lg:flex-row items-center bg-white overflow-hidden"
       >
         <div className="w-full lg:w-1/2">
-          <div className="xl:absolute left-20 top-[42%] xl:-translate-y-1/2 w-full xl:w-1/2">
+          {/* <div className="xl:absolute left-20 top-1/2 xl:-translate-y-1/2 w-full xl:w-1/2"> */}
+          <div>
             <motion.img
-              src="/images/plane.png"
+              src="/images/cargo-ship-sea3.png"
               alt="Airplane"
               className="w-full h-full"
               initial={{ opacity: 0, y: -50 }}

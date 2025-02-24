@@ -213,7 +213,7 @@ const Footer = () => {
     <motion.footer
       className="text-white py-20 px-2 lg:px-20 relative bg-cover bg-center"
       style={{
-        backgroundImage: "url('/images/footer-bg.jpg')",
+        backgroundImage: "url('/images/footer-bg2.jpg')",
       }}
       initial="hidden"
       whileInView="visible"
@@ -226,8 +226,9 @@ const Footer = () => {
           {/* Corporate Office */}
           <motion.div variants={itemVariants}>
             <h3 className="text-xl font-semibold mb-4">Corporate Office</h3>
-            <p className="mb-2">ARK Logistics & </p>
-            <p className="mb-4">Maritime Dubai, UAE</p>
+            <p className="mb-2">ARK LogMar LLC-FZ</p>
+            <p className="mb-2">6th Floor, Meydan Grandstand</p>
+            <p className="mb-4">Dubai, UAE</p>
             <p className="mb-2">+971 50 1898269</p>
             <p>director@ark-maritime.com</p>
           </motion.div>
@@ -261,7 +262,7 @@ const Footer = () => {
           {/* Newsletter */}
           <motion.div variants={itemVariants}>
             <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
-            <p className="mb-4">Delivering Excellence in Global Logistics.</p>
+            {/* <p className="mb-4">Delivering Excellence in Global Logistics.</p> */}
 
             {/* Social Media Icons */}
             <div className="flex gap-4 mt-8">
@@ -272,7 +273,7 @@ const Footer = () => {
                 <motion.a
                   key={index}
                   href="#"
-                  className="border border-white rounded-full p-2 hover:bg-white hover:text-teal-900"
+                  className="border border-white rounded-full p-2 hover:bg-white hover:text-secondary"
                   whileHover={hoverEffect}
                 >
                   <svg

@@ -162,7 +162,7 @@ export function Navbar() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
       className={`w-full fixed top-0 z-50 ${
-        isScrolled ? "bg-[#006957]/80 " : "bg-transparent text-white"
+        isScrolled ? "bg-gray-100" : "bg-transparent text-white"
       }`}
     >
       <div className="flex items-center justify-between px-8 ">
@@ -175,10 +175,10 @@ export function Navbar() {
         >
           {/* <Wave className="w-6 h-6 mr-2" /> */}
           <Image
-            src="/images/ark_logo2.png"
+            src="/images/logo4.png"
             width={1000}
             height={1000}
-            className="w-40 h-full"
+            className="w-32 h-full"
           />
           {/* <span className="text-xl font-semibold">Logistics & Maritime</span> */}
         </motion.div>
@@ -188,7 +188,9 @@ export function Navbar() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="flex items-center space-x-8 text-white py-6"
+          className={`flex items-center space-x-8 py-6${
+            isScrolled ? "bg-black" : "text-white"
+          }`}
         >
           <a href="/" className="hover:text-gray-300">
             Home

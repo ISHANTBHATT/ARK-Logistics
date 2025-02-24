@@ -45,7 +45,7 @@ const Page = () => {
         <div className="relative h-full container mx-auto px-4 flex flex-col justify-center items-center text-white">
           <h1 className="text-5xl font-bold mb-4">About Us</h1>
           <div className="flex items-center gap-4 text-lg">
-            <a href="/" className="hover:text-orange-500 transition-colors">
+            <a href="/" className="hover:text-secondary transition-colors">
               Home
             </a>
             <span>|</span>
@@ -58,7 +58,7 @@ const Page = () => {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2 relative">
               <div className="relative flex justify-center">
-                <div className="max-w-[300px] h-full relative overflow-hidden group shadow-xl shadow-[#2F6263]">
+                <div className="w-[300px] h-full relative overflow-hidden group shadow-xl shadow-primary">
                   <Image
                     src="/images/abt-1.jpg"
                     width={1000}
@@ -76,8 +76,8 @@ const Page = () => {
                   </div> */}
                 </div>
 
-                <div className="bg-[#004041] absolute -bottom-10 right-20 bg-navy-900 text-white p-8 rounded-lg flex flex-col items-center">
-                  <div className="text-5xl font-bold text-orange-500">3+</div>
+                <div className="bg-primary absolute -bottom-10 right-20 bg-navy-900 text-white p-8 rounded-lg flex flex-col items-center">
+                  <div className="text-5xl font-bold ">3+</div>
                   <div className="text-xl mt-2">Continents</div>
                   {/* <div className="text-sm text-gray-400">Since 1996</div> */}
                 </div>
@@ -85,7 +85,7 @@ const Page = () => {
             </div>
 
             <div className="lg:w-1/2">
-              <h2 className="text-3xl font-semibold text-orange-500 mb-2">
+              <h2 className="text-3xl font-semibold text-primary mb-2">
                 ABOUT US
               </h2>
               <h3 className="text-4xl font-bold text-gray-900 mb-6">
@@ -134,7 +134,7 @@ const Page = () => {
           <div className="relative">
             <div className="absolute -left-20 -bottom-10 w-64 h-48 bg-orange-400 rounded-3xl transform "></div>
             <div className="absolute -right-10 -top-16 w-60 h-56 bg-orange-500 rounded-3xl transform "></div>
-            <div className="relative w-full bg-gradient-to-b from-teal-700 to-teal-600 rounded-3xl p-8 shadow-xl text-white">
+            <div className="relative w-full bg-primary rounded-3xl p-8 shadow-xl text-white">
               <div className="flex items-center gap-2 mb-4">
                 <Target className="w-10 h-10 text-white" />
                 <h1 className="text-4xl font-bold">Mission</h1>
@@ -161,7 +161,7 @@ const Page = () => {
           <div className="relative">
             <div className="absolute -left-8 -bottom-14 w-56 h-56 bg-orange-400 rounded-full transform -translate-x-1/4"></div>
             <div className="absolute -right-4 -top-16 w-56 h-56 bg-orange-500 rounded-full transform translate-x-1/4"></div>
-            <div className="relative w-full bg-gradient-to-b from-teal-700 to-teal-600 rounded-3xl p-8 shadow-xl text-white">
+            <div className="relative w-full bg-primary rounded-3xl p-8 shadow-xl text-white">
               <div className="flex items-center gap-2 mb-4">
                 <Eye className="w-10 h-10 text-white" />
                 <h1 className="text-3xl font-bold">Vision</h1>

@@ -1,13 +1,22 @@
 import React from "react";
 import {
-  Truck,
-  Ship,
-  Plane,
-  Train,
-  Package,
+  Briefcase,
+  Building,
+  Leaf,
+  Box,
+  Warehouse,
   ClipboardList,
   ChevronRight,
 } from "lucide-react";
+// import {
+//   Truck,
+//   Ship,
+//   Plane,
+//   Train,
+//   Package,
+//   ClipboardList,
+//   ChevronRight,
+// } from "lucide-react";
 import { Testimonials3 } from "../components/Testimonials3";
 import Parallax from "../components/Parallex";
 import Link from "next/link";
@@ -17,7 +26,7 @@ const services = [
     id: "01",
     title: "Consultancy",
     slug: "consultancy",
-    icon: Plane,
+    icon: Briefcase,
     description:
       "The ARK team brings extensive expertise in Liner Shipping, Ports & Terminals, Digitalization in Shipping, and Vessel Agency that can be utilized for your organization. Additionally, we offer advisory services for regional representation, which includes the commercialization of your products and services, business development, and navigating regulatory processes.",
     content: {
@@ -40,7 +49,7 @@ const services = [
     id: "02",
     title: "Agency",
     slug: "agency",
-    icon: Truck,
+    icon: Building,
     description:
       "We offer a range of services including port clearance, cargo handling, crew and immigration assistance, and various administrative tasks. With our own offices in East Africa, we provide comprehensive commercial agency services for both vessel operators and NVOCs.",
     content: {
@@ -54,7 +63,7 @@ const services = [
     id: "03",
     title: "Green Crew Change",
     slug: "green-crew-change",
-    icon: Ship,
+    icon: Leaf,
     description:
       "One of our primary services is enabling Shipowners and managers to transition their current crew change processes to a Green mode. This involves a systematic analysis of process changes to replace existing procedures with those that minimize carbon emissions.",
     content: {
@@ -68,7 +77,7 @@ const services = [
     id: "04",
     title: "Cargo",
     slug: "cargo",
-    icon: Train,
+    icon: Box,
     description:
       "Whether you need to ship in single container loads or in bulk, we offer comprehensive solutions for all your supply chain needs. Ensuring you work with just one vendor who delivers clear, transparent, and timely information. We collaborate with dependable partners to connect FOB cargo with CRF cargo.",
     content: {
@@ -81,7 +90,7 @@ const services = [
   // {
   //   id: "05",
   //   title: "Warehousing",
-  //   icon: Package,
+  //   icon: warehousing,
   //   description:
   //     "Our aim is to optimize and improve your supply chain so that we can give you the best service.",
   // },
@@ -149,7 +158,7 @@ const Page = () => {
         <div className="relative h-full container mx-auto px-4 flex flex-col justify-center items-center text-white">
           <h1 className="text-5xl font-bold mb-4">Services</h1>
           <div className="flex items-center gap-4 text-lg">
-            <a href="/" className="hover:text-red-500 transition-colors">
+            <a href="/" className="hover:text-secondary transition-colors">
               Home
             </a>
             <span>|</span>
@@ -160,7 +169,7 @@ const Page = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-semibold text-red-500 mb-2">
+            <h2 className="text-4xl font-semibold text-secondary mb-2">
               WHAT WE OFFER
             </h2>
             {/* <h3 className="text-4xl font-bold text-gray-900">
@@ -177,13 +186,13 @@ const Page = () => {
             {services.map((service) => (
               <div
                 key={service.id}
-                className="bg-white p-8 rounded-lg shadow-lg border-[20px] border-gray-100 hover:border-[#2F6263] transition-transform duration-300 hover:transform hover:-translate-y-2"
+                className="bg-white p-8 rounded-lg shadow-lg border-[20px] border-gray-100 hover:border-primary transition-transform duration-300 hover:transform hover:-translate-y-2"
               >
-                <div className="h-16 w-16 bg-teal-50 rounded-lg flex items-center justify-center mb-6">
-                  <service.icon className="h-8 w-8 text-[#2F6263]" />
+                <div className="h-16 w-16 bg-blue-50 rounded-lg flex items-center justify-center mb-6">
+                  <service.icon className="h-8 w-8 text-primary" />
                 </div>
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="text-4xl font-bold text-[#2F6263]">
+                  <span className="text-4xl font-bold text-primary">
                     {service.id}
                   </span>
                   <h4 className="text-xl font-bold text-gray-900">
@@ -192,7 +201,7 @@ const Page = () => {
                 </div>
                 <p className="text-gray-600 mb-6">{service.description}</p>
                 <Link href={`/services/${service.slug}`}>
-                  <button className="text-[#2F6263] font-semibold hover:text-[#004041] transition-colors group flex items-center">
+                  <button className="text-primary font-semibold hover:text-blue-900 transition-colors group flex items-center">
                     <ChevronRight className="text-[#004041] h-5 w-5 flex-shrink-0 hidden group-hover:block " />
                     VIEW DETAIL
                   </button>

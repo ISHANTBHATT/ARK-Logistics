@@ -176,7 +176,7 @@ const Contact = () => {
             className="w-full h-full object-cover rounded-lg"
           />
           <motion.div
-            className="absolute bottom-8 left-8 bg-teal-800 text-white p-4 rounded-lg max-w-xs"
+            className="absolute bottom-8 left-8 bg-primary text-white p-4 rounded-lg max-w-xs"
             whileHover={{ scale: 1.1 }}
           >
             <p className="text-sm">ARK Logistics & Maritime Dubai, UAE</p>

@@ -40,7 +40,7 @@ function Page() {
         <div className="relative h-full container mx-auto px-4 flex flex-col justify-center items-center text-white">
           <h1 className="text-5xl font-bold mb-4">Contact Us</h1>
           <div className="flex items-center gap-4 text-lg">
-            <a href="/" className="hover:text-orange-500 transition-colors">
+            <a href="/" className="hover:text-secondary transition-colors">
               Home
             </a>
             <span>|</span>
@@ -64,8 +64,11 @@ function Page() {
               <div>
                 <MapPinned className="w-8 h-8 text-red-600 mb-4" />
                 <h3 className="font-bold text-xl mb-2">Address</h3>
-                <p>ARK Logistics &</p>
-                <p>Maritime Dubai, UAE</p>
+
+                <p>ARK LogMar LLC-FZ</p>
+                <p>6th Floor, Meydan Grandstand</p>
+                <p>License No 2527346.01</p>
+                <p>Dubai, UAE</p>
               </div>
 
               <div>
@@ -90,7 +93,7 @@ function Page() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-[#004041] p-8 rounded-xl shadow-lg">
+          <div className="bg-primary p-8 rounded-xl shadow-lg">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -100,7 +103,7 @@ function Page() {
                     placeholder="*Name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-[#2F6263] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF4A17]"
+                    className="w-full px-4 py-3 bg-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary"
                     required
                   />
                 </div>
@@ -111,7 +114,7 @@ function Page() {
                     placeholder="*Email address"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-[#2F6263] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF4A17]"
+                    className="w-full px-4 py-3 bg-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary"
                     required
                   />
                 </div>
@@ -123,7 +126,7 @@ function Page() {
                   placeholder="*Please enter your phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-[#2F6263] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF4A17]"
+                  className="w-full px-4 py-3 bg-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary"
                   required
                 />
               </div>
@@ -134,7 +137,7 @@ function Page() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={6}
-                  className="w-full px-4 py-3 bg-[#2F6263] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF4A17]"
+                  className="w-full px-4 py-3 bg-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary"
                   required
                 ></textarea>
               </div>
@@ -143,7 +146,7 @@ function Page() {
               </p>
               <button
                 type="submit"
-                className="bg-red-600 text-white px-8 py-3 rounded-xl hover:bg-red-700 transition-colors"
+                className="bg-secondary text-white px-8 py-3 rounded-xl hover:bg-red-800 transition-colors"
               >
                 SEND MESSAGE
               </button>
@@ -163,7 +166,7 @@ function Page() {
       </div>
 
       {/* Contact Info Bar */}
-      <div className="bg-[#004041] text-white py-12">
+      <div className="bg-primary text-white py-12">
         <div className="container mx-auto px-4 flex flex-wrap justify-around items-center gap-8">
           <div className="flex items-center gap-2">
             <Phone className="text-red-600 h-6 w-6" />
@@ -175,7 +178,10 @@ function Page() {
           </div>
           <div className="flex items-center gap-2">
             <MapPin className="text-red-600 h-6 w-6" />
-            <span>ARK Logistics & Maritime Dubai, UAE</span>
+            <span>
+              ARK LogMar LLC-FZ 6th Floor, Meydan Grandstand License No
+              2527346.01 Dubai, UAE
+            </span>
           </div>
         </div>
       </div>

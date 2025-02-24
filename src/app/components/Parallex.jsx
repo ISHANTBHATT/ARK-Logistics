@@ -31,7 +31,7 @@ function Parallax() {
             create intrigue and make the most of indoor and outdoor rooms
           </p> */}
           <Link href="contact">
-            <button className="group bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl">
+            <button className="group bg-secondary hover:bg-red-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl">
               Contact Us
               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </button>
