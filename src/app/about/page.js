@@ -67,8 +67,8 @@ const Page = () => {
                     className="rounded-lg w-full h-full shine-mask"
                   />
                   {/* <div
-                    className="absolute inset-0 bg-gradient-to-br from-transparent via-white/50 to-transparent 
-                  opacity-0 group-hover:opacity-100 transition duration-500 transform 
+                    className="absolute inset-0 bg-gradient-to-br from-transparent via-white/50 to-transparent
+                  opacity-0 group-hover:opacity-100 transition duration-500 transform
                   translate-x-[-100%] translate-y-[-100%] group-hover:translate-x-[100%] group-hover:translate-y-[100%]"
                   ></div> */}
                   {/* <div className="absolute inset-0 overflow-hidden">
@@ -111,14 +111,14 @@ const Page = () => {
               <div className="space-y-4">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <ChevronRight className="text-orange-500 h-5 w-5 flex-shrink-0" />
+                    <ChevronRight className="text-secondary h-5 w-5 flex-shrink-0" />
                     <p className="text-gray-700">{feature}</p>
                   </div>
                 ))}
               </div>
 
               {/* <button
-                className="mt-8 px-8 py-3 bg-orange-500 text-white font-semibold rounded-xl 
+                className="mt-8 px-8 py-3 bg-orange-500 text-white font-semibold rounded-xl
               hover:bg-orange-600 transition-colors duration-300"
               >
                 Learn More
@@ -132,8 +132,8 @@ const Page = () => {
         {/* Design with Rounded Rectangles */}
         <div className="max-w-4xl mx-auto mb-16">
           <div className="relative">
-            <div className="absolute -left-20 -bottom-10 w-64 h-48 bg-orange-400 rounded-3xl transform "></div>
-            <div className="absolute -right-10 -top-16 w-60 h-56 bg-orange-500 rounded-3xl transform "></div>
+            <div className="absolute -left-20 -bottom-10 w-64 h-48 bg-secondary rounded-3xl transform "></div>
+            <div className="absolute -right-10 -top-16 w-60 h-56 bg-secondary rounded-3xl transform "></div>
             <div className="relative w-full bg-primary rounded-3xl p-8 shadow-xl text-white">
               <div className="flex items-center gap-2 mb-4">
                 <Target className="w-10 h-10 text-white" />
@@ -159,8 +159,8 @@ const Page = () => {
         {/* Design with Circles */}
         <div className="max-w-4xl mx-auto">
           <div className="relative">
-            <div className="absolute -left-8 -bottom-14 w-56 h-56 bg-orange-400 rounded-full transform -translate-x-1/4"></div>
-            <div className="absolute -right-4 -top-16 w-56 h-56 bg-orange-500 rounded-full transform translate-x-1/4"></div>
+            <div className="absolute -left-8 -bottom-14 w-56 h-56 bg-secondary rounded-full transform -translate-x-1/4"></div>
+            <div className="absolute -right-4 -top-16 w-56 h-56 bg-secondary rounded-full transform translate-x-1/4"></div>
             <div className="relative w-full bg-primary rounded-3xl p-8 shadow-xl text-white">
               <div className="flex items-center gap-2 mb-4">
                 <Eye className="w-10 h-10 text-white" />
@@ -240,3 +240,162 @@ const Page = () => {
 };
 
 export default Page;
+
+// "use client";
+// import React from "react";
+// import { ChevronRight, Compass, Eye, Target } from "lucide-react";
+// import Image from "next/image";
+// import Parallax from "../components/Parallex";
+// import { motion } from "framer-motion";
+
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Navigation, Autoplay } from "swiper/modules";
+// import "swiper/css";
+// import "swiper/css/navigation";
+// import "swiper/css/autoplay";
+
+// const features = [
+//   "Exceptional service tailored to meet the unique needs of each client.",
+//   "Experienced team of professionals ensures timely and efficient transportation solutions.",
+//   "Cutting-edge technology and industry expertise to offer reliable and cost-effective logistics options.",
+//   "Commitment to sustainability and adherence to the highest safety standards set us apart as a leader in the industry.",
+// ];
+
+// const logos = [
+//   { id: 1, src: "/images/client2.png", alt: "Abstract" },
+//   { id: 2, src: "/images/client2.png", alt: "YinYangPaint" },
+//   { id: 3, src: "/images/client2.png", alt: "TechLogo" },
+//   { id: 4, src: "/images/client2.png", alt: "AbstractLogo" },
+//   { id: 5, src: "/images/client2.png", alt: "AbstractLogo2" },
+//   { id: 6, src: "/images/client2.png", alt: "Abstract2" },
+// ];
+
+// const Page = () => {
+//   const sectionVariants = {
+//     hidden: { opacity: 0, y: 20 },
+//     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+//   };
+
+//   const staggerVariants = {
+//     hidden: { opacity: 0, x: -20 },
+//     visible: (i) => ({
+//       opacity: 1,
+//       x: 0,
+//       transition: { delay: i * 0.1 },
+//     }),
+//   };
+
+//   return (
+//     <>
+//       {/* Hero Section - Add animation */}
+//       <motion.div
+//         initial={{ opacity: 0 }}
+//         animate={{ opacity: 1 }}
+//         className="relative h-[500px]"
+//       >
+//         <div
+//           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+//           style={{
+//             backgroundImage: 'url("/images/1.jpg")',
+//           }}
+//         >
+//           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+//         </div>
+//         {/* Content */}
+//         <div className="relative h-full container mx-auto px-4 flex flex-col justify-center items-center text-white">
+//           <h1 className="text-5xl font-bold mb-4">About Us</h1>
+//           <div className="flex items-center gap-4 text-lg">
+//             <a href="/" className="hover:text-secondary transition-colors">
+//               Home
+//             </a>
+//             <span>|</span>
+//             <span>About Us</span>
+//           </div>
+//         </div>
+//       </motion.div>
+
+//       {/* About Section */}
+//       <section className="py-20 bg-white">
+//         <div className="container mx-auto px-4">
+//           <div className="flex flex-col lg:flex-row items-center gap-12">
+//             {/* Image Section */}
+//             <motion.div
+//               initial="hidden"
+//               whileInView="visible"
+//               variants={sectionVariants}
+//               viewport={{ once: true, margin: "-100px" }}
+//               className="lg:w-1/2 relative"
+//             >
+//               {/* ... keep image section content the same */}
+//             </motion.div>
+
+//             {/* Text Content */}
+//             <motion.div
+//               initial="hidden"
+//               whileInView="visible"
+//               variants={sectionVariants}
+//               viewport={{ once: true, margin: "-100px" }}
+//               className="lg:w-1/2"
+//             >
+//               <motion.div variants={sectionVariants}>
+//                 <h2 className="text-3xl font-semibold text-primary mb-2">
+//                   ABOUT US
+//                 </h2>
+//               </motion.div>
+//               <motion.div variants={sectionVariants}>
+//                 <h3 className="text-4xl font-bold text-gray-900 mb-6">
+//                   Why Choose ARK Logistics & Maritime
+//                 </h3>
+//               </motion.div>
+
+//               {/* Features List */}
+//               <div className="space-y-4">
+//                 {features.map((feature, index) => (
+//                   <motion.div
+//                     key={index}
+//                     custom={index}
+//                     initial="hidden"
+//                     whileInView="visible"
+//                     variants={staggerVariants}
+//                     viewport={{ once: true }}
+//                     className="flex items-center gap-3"
+//                   >
+//                     <ChevronRight className="text-secondary h-5 w-5 flex-shrink-0" />
+//                     <p className="text-gray-700">{feature}</p>
+//                   </motion.div>
+//                 ))}
+//               </div>
+//             </motion.div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Mission & Vision Sections */}
+//       <div className="h-full overflow-hidden bg-white p-2 md:p-20 flex flex-col justify-center gap-20">
+//         {/* Mission Section */}
+//         <motion.div
+//           initial={{ opacity: 0, x: -100 }}
+//           whileInView={{ opacity: 1, x: 0 }}
+//           transition={{ duration: 0.8 }}
+//           viewport={{ once: true }}
+//           className="max-w-4xl mx-auto mb-16"
+//         >
+//           {/* ... keep mission section content the same */}
+//         </motion.div>
+
+//         {/* Vision Section */}
+//         <motion.div
+//           initial={{ opacity: 0, x: 100 }}
+//           whileInView={{ opacity: 1, x: 0 }}
+//           transition={{ duration: 0.8 }}
+//           viewport={{ once: true }}
+//           className="max-w-4xl mx-auto"
+//         >
+//           {/* ... keep vision section content the same */}
+//         </motion.div>
+//       </div>
+
+//       <Parallax />
+//     </>
+//   );
+// };

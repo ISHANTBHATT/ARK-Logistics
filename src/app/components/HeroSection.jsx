@@ -127,7 +127,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Plane, Truck, Ship, CheckCircle2 } from "lucide-react";
+import { Plane, Truck, Ship, CheckCircle2, Briefcase, Box } from "lucide-react";
 import Link from "next/link";
 
 export function HeroSection() {
@@ -147,7 +147,7 @@ export function HeroSection() {
             className="p-10 border group hover:shadow-lg transition-shadow"
           >
             <div className="flex gap-4 items-center">
-              <Truck className="w-12 h-12 text-red-600 mb-4" />
+              <Briefcase className="w-12 h-12 text-red-600 mb-4" />
               <h3 className="text-2xl font-bold mb-4">Consulting</h3>
             </div>
             <p className="text-gray-600">
@@ -179,7 +179,7 @@ export function HeroSection() {
             className="p-10 border hover:shadow-lg transition-shadow"
           >
             <div className="flex gap-4 items-center">
-              <Plane className="w-12 h-12 text-red-600 mb-4" />
+              <Box className="w-12 h-12 text-red-600 mb-4" />
               <h3 className="text-2xl font-bold mb-4">Cargo</h3>
             </div>
             <p className="text-gray-600">
