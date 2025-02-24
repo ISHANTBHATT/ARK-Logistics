@@ -159,7 +159,7 @@
 "use client";
 import { useRouter, useParams } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, Truck, Ship, Plane, Train } from "lucide-react";
+import { Briefcase, Building, Box, Leaf, ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
 
 const services = [
@@ -167,7 +167,7 @@ const services = [
     id: "01",
     title: "Consultancy",
     slug: "consultancy",
-    icon: Plane,
+    icon: Briefcase,
     description:
       "The ARK team brings extensive expertise in Liner Shipping, Ports & Terminals, Digitalization in Shipping, and Vessel Agency that can be utilized for your organization. Additionally, we offer advisory services for regional representation, which includes the commercialization of your products and services, business development, and navigating regulatory processes.",
     content: {
@@ -190,7 +190,7 @@ const services = [
     id: "02",
     title: "Agency",
     slug: "agency",
-    icon: Truck,
+    icon: Building,
     description:
       "We offer a range of services including port clearance, cargo handling, crew and immigration assistance, and various administrative tasks. With our own offices in East Africa, we provide comprehensive commercial agency services for both vessel operators and NVOCs.",
     content: {
@@ -216,7 +216,7 @@ const services = [
     id: "03",
     title: "Green Crew Change",
     slug: "green-crew-change",
-    icon: Ship,
+    icon: Leaf,
     description:
       "One of our primary services is enabling Shipowners and managers to transition their current crew change processes to a Green mode. This involves a systematic analysis of process changes to replace existing procedures with those that minimize carbon emissions.",
     content: {
@@ -234,7 +234,7 @@ const services = [
     id: "04",
     title: "Cargo",
     slug: "cargo",
-    icon: Train,
+    icon: Box,
     description:
       "Whether you need to ship in single container loads or in bulk, we offer comprehensive solutions for all your supply chain needs. Ensuring you work with just one vendor who delivers clear, transparent, and timely information. We collaborate with dependable partners to connect FOB cargo with CRF cargo.",
     content: {
@@ -273,7 +273,7 @@ const ServiceDetail = () => {
           className="absolute inset-0 bg-cover bg-center transform transition-transform duration-1000 hover:scale-105"
           style={{ backgroundImage: `url("${service.content.image}")` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-t from-[#004041] via-[#00404170] to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary via-[#00404170] to-transparent" />
         </div>
 
         <div className="relative container mx-auto px-4 h-full flex flex-col justify-end pb-12">
@@ -338,10 +338,10 @@ const ServiceDetail = () => {
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.8 + index * 0.1 }}
-                      className="flex p-6 bg-[#f8fafc] rounded-xl hover:bg-white hover:shadow-md transition-all duration-300"
+                      className="flex p-6 bg-blue-50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300"
                     >
                       <div className="flex-shrink-0">
-                        <div className="w-8 h-8 bg-[#004041] text-white rounded-full flex items-center justify-center mr-4">
+                        <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-4">
                           {index + 1}
                         </div>
                       </div>
