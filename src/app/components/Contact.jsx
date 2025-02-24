@@ -122,10 +122,11 @@ const Contact = () => {
             <motion.div variants={itemVariants}>
               <h3 className="text-xl font-semibold mb-4">Corporate Office</h3>
               <div className="space-y-2">
-                <p className="flex items-center gap-2">
-                  <MapPin className="w-5 h-5 lg:w-8 lg:h-8" />
-                  ARK Logistics & Maritime Dubai, UAE
-                </p>
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-12 h-12 lg:w-20 lg:h-20" />
+                  ARK LogMar LLC-FZ 6th Floor, Meydan Grandstand License No
+                  2527346.01 Dubai, UAE
+                </div>
                 <p className="flex items-center gap-2">
                   <Phone className="w-6 h-6" />
                   +971 50 1898269
