@@ -148,7 +148,7 @@ const Page = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url("/images/1.jpg")',
+            backgroundImage: 'url("/images/2.jpg")',
           }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>

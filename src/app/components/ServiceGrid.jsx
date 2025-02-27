@@ -271,21 +271,21 @@ const services = [
     slug: "consultancy",
     description:
       "Contrary to popular belief, Lorem Ipsum is not simply random text.",
-    hoverImage: "/images/s1.jpg",
+    hoverImage: "/images/Consultancy.jpg",
   },
   {
     title: "Agency",
     slug: "agency",
     description:
       "Contrary to popular belief, Lorem Ipsum is not simply random text.",
-    hoverImage: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05",
+    hoverImage: "/images/agency.jpg",
   },
   {
     title: "Green Crew Change",
     slug: "green-crew-change",
     description:
       "Contrary to popular belief, Lorem Ipsum is not simply random text.",
-    hoverImage: "/images/s4.jpg",
+    hoverImage: "/images/green.jpg",
   },
   {
     title: "Cargo",

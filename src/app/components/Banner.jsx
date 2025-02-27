@@ -177,6 +177,7 @@ import {
   Instagram,
   MoveDown,
 } from "lucide-react";
+import { GiAnchor } from "react-icons/gi";
 import Link from "next/link";
 
 // Animation variants
@@ -216,7 +217,7 @@ export function Banner() {
       >
         <source src="videos/5.mp4" type="video/mp4" />
       </motion.video>
-      <div className="absolute inset-0  bg-gradient-to-b from-gray-100/30 to-transparent" />
+      <div className="absolute inset-0  bg-gradient-to-b from-gray-100/40 to-transparent" />
       {/* Content Container */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -235,15 +236,17 @@ export function Banner() {
               Specialized Logistics and Maritime Solutions
             </motion.div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-6xl font-semibold text-white mb-4"
-            >
-              ARK Logistics &
-            </motion.h1>
-
+            <div className="flex space-x-4 items-center">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.8 }}
+                className="text-6xl font-semibold text-white mb-4"
+              >
+                ARK Logistics
+              </motion.h1>
+              <GiAnchor className="text-white w-12 h-12" />
+            </div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

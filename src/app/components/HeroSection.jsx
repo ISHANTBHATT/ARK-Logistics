@@ -202,7 +202,7 @@ export function HeroSection() {
           {/* <div className="xl:absolute left-20 top-1/2 xl:-translate-y-1/2 w-full xl:w-1/2"> */}
           <div>
             <motion.img
-              src="/images/cargo-ship-sea3.png"
+              src="/images/cargo-ship-sea6.png"
               alt="Airplane"
               className="w-full h-full"
               initial={{ opacity: 0, y: -50 }}

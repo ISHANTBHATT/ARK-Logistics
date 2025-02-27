@@ -136,8 +136,10 @@ import { Waves as Wave, Phone, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export function Navbar() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -154,7 +156,7 @@ export function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  const isHomePage = pathname === "/";
   return (
     <motion.nav
       initial={{ opacity: 0, y: -50 }}
@@ -162,7 +164,7 @@ export function Navbar() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
       className={`w-full fixed top-0 z-50 ${
-        isScrolled ? "bg-gray-100" : "bg-transparent text-white"
+        isScrolled || !isHomePage ? "bg-gray-100" : "bg-transparent text-white"
       }`}
     >
       <div className="flex items-center justify-between px-8 ">

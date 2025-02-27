@@ -19,7 +19,7 @@ function Page() {
         <div className="relative h-full container mx-auto px-4 flex flex-col justify-center items-center text-white">
           <h1 className="text-5xl font-bold mb-4">Clients</h1>
           <div className="flex items-center gap-4 text-lg">
-            <a href="/" className="hover:text-orange-500 transition-colors">
+            <a href="/" className="hover:text-secondary transition-colors">
               Home
             </a>
             <span>|</span>

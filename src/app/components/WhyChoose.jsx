@@ -96,7 +96,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Plane, Package, Users, Truck } from "lucide-react";
-
+import { LiaAnchorSolid } from "react-icons/lia";
 function ServiceItem({ title, description, icon: Icon }) {
   return (
     <motion.div
@@ -115,7 +115,8 @@ function ServiceItem({ title, description, icon: Icon }) {
         className="text-red-600 opacity-0 group-hover:opacity-100 transition-opacity"
         whileHover={{ x: 5 }}
       >
-        <ArrowRight />
+        {/* <ArrowRight /> */}
+        <LiaAnchorSolid size={40} />
       </motion.div>
     </motion.div>
   );
@@ -185,6 +186,7 @@ export function WhyChoose() {
               className="text-red-600 font-semibold hover:text-red-700 flex items-center"
             >
               Read More
+              {/* <LiaAnchorSolid className="ml-2" size={20} /> */}
               <ArrowRight className="ml-2" size={20} />
             </a>
           </div>
