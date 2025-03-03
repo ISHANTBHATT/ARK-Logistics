@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Briefcase,
@@ -20,6 +21,7 @@ import {
 import { Testimonials3 } from "../components/Testimonials3";
 import Parallax from "../components/Parallex";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -166,9 +168,14 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, x: -500 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
             <h2 className="text-4xl font-semibold text-secondary mb-2">
               WHAT WE OFFER
             </h2>
@@ -180,12 +187,16 @@ const Page = () => {
               industry the standard dummy text ever since the when an printer
               took.
             </p> */}
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service) => (
-              <div
+            {services.map((service, index) => (
+              <motion.div
                 key={service.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className="bg-white p-8 rounded-lg shadow-lg border-[20px] border-gray-100 hover:border-primary transition-transform duration-300 hover:transform hover:-translate-y-2"
               >
                 <div className="h-16 w-16 bg-blue-50 rounded-lg flex items-center justify-center mb-6">
@@ -206,7 +217,7 @@ const Page = () => {
                     VIEW DETAIL
                   </button>
                 </Link>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

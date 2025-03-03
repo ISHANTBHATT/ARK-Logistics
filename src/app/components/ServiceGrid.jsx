@@ -429,7 +429,7 @@ function ServiceGrid() {
           <motion.div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: "url('/images/service-bg.png')",
+              backgroundImage: "url('/images/bg-7.jpeg')",
               height: `${backgroundHeight}px`, // Dynamic height
             }}
             initial={{ opacity: 0 }}

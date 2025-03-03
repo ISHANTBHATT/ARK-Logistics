@@ -178,6 +178,7 @@ import {
   MoveDown,
 } from "lucide-react";
 import { GiAnchor } from "react-icons/gi";
+import { LiaAnchorSolid } from "react-icons/lia";
 import Link from "next/link";
 
 // Animation variants
@@ -215,9 +216,9 @@ export function Banner() {
         muted
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
-        <source src="videos/5.mp4" type="video/mp4" />
+        <source src="videos/6.mp4" type="video/mp4" />
       </motion.video>
-      <div className="absolute inset-0  bg-gradient-to-b from-gray-100/40 to-transparent" />
+      {/* <div className="absolute inset-0  bg-gradient-to-b from-gray-100/40 to-transparent" /> */}
       {/* Content Container */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -225,7 +226,7 @@ export function Banner() {
         className="relative z-20 min-h-screen"
       >
         {/* Main Content */}
-        <main className="px-8 pt-40">
+        <main className="px-8 absolute top-1/3">
           <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, y: -20 }}
@@ -243,18 +244,19 @@ export function Banner() {
                 transition={{ delay: 0.3, duration: 0.8 }}
                 className="text-6xl font-semibold text-white mb-4"
               >
-                ARK Logistics
+                ARK
               </motion.h1>
-              <GiAnchor className="text-white w-12 h-12" />
             </div>
-            <motion.h2
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
-              className="text-6xl font-semibold text-white mb-8"
+              className="flex gap-4 text-6xl font-semibold text-white mb-8"
             >
+              Logistics
+              <GiAnchor className="text-white w-12 h-12" />
               Maritime
-            </motion.h2>
+            </motion.div>
 
             <motion.div
               variants={containerVariants}
@@ -337,7 +339,7 @@ export function Banner() {
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
               href="#"
-              className="p-2 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors"
+              className="p-2 bg-black/50 backdrop-blur-sm rounded-full hover:bg-black/60 transition-colors"
             >
               <Icon className="w-5 h-5 text-white" />
             </motion.a>
@@ -359,7 +361,7 @@ export function Banner() {
               }}
               className=""
             >
-              <MoveDown className="w-12 h-12 -rotate-90" />
+              <LiaAnchorSolid className="w-12 h-12 -rotate-90" />
             </motion.div>
           </div>
         </div>

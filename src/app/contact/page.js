@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { MapPinned, Phone, MailOpen, Clock, Mail, MapPin } from "lucide-react";
-
+import { motion } from "framer-motion";
 function Page() {
   const [formData, setFormData] = useState({
     name: "",
@@ -24,7 +24,7 @@ function Page() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 overflow-hidden">
       <div className="relative h-[500px]">
         {/* Background Image */}
         <div
@@ -53,7 +53,11 @@ function Page() {
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
             <h2 className="text-4xl font-bold mb-6">Get In Touch</h2>
             <p className="text-gray-600 mb-8">
               The team at ARK Logistics & Maritime is eager to discuss all your
@@ -90,10 +94,15 @@ function Page() {
                 <p>+1 718-625-2030</p>
               </div> */}
             </div>
-          </div>
+          </motion.div>
 
           {/* Contact Form */}
-          <div className="bg-primary p-8 rounded-xl shadow-lg">
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="bg-primary p-8 rounded-xl shadow-lg"
+          >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -151,19 +160,24 @@ function Page() {
                 SEND MESSAGE
               </button>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Map Section */}
-      <div className="w-full h-[450px] relative">
+      <motion.div
+        initial={{ opacity: 0, y: 500 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="w-full h-[450px] relative"
+      >
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d925228.5488029!2d54.45357637381895!3d25.06209036289502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1739853447925!5m2!1sen!2sin"
           className="w-full h-full border-0"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-      </div>
+      </motion.div>
 
       {/* Contact Info Bar */}
       <div className="bg-primary text-white py-12">

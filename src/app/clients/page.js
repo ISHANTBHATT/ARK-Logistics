@@ -1,6 +1,6 @@
 "use client";
 import { HoverEffect } from "@/components/ui/car-hover-effect";
-
+import { motion } from "framer-motion";
 function Page() {
   return (
     <>
@@ -28,9 +28,14 @@ function Page() {
         </div>
       </div>
       <div className="w-full h-full bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-5xl mx-auto py-20 ">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="max-w-5xl mx-auto py-20 "
+        >
           <HoverEffect items={projects} />
-        </div>
+        </motion.div>
       </div>
     </>
   );

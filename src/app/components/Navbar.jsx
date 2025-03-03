@@ -164,7 +164,7 @@ export function Navbar() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
       className={`w-full fixed top-0 z-50 ${
-        isScrolled || !isHomePage ? "bg-gray-100" : "bg-transparent text-white"
+        isScrolled || !isHomePage ? "bg-gray-100" : "bg-transparent text-black"
       }`}
     >
       <div className="flex items-center justify-between px-8 ">
@@ -194,16 +194,16 @@ export function Navbar() {
             isScrolled ? "bg-black" : "text-white"
           }`}
         >
-          <a href="/" className="hover:text-gray-300">
+          <a href="/" className="hover:text-gray-400">
             Home
           </a>
-          <a href="/about" className="hover:text-gray-300">
+          <a href="/about" className="hover:text-gray-400">
             About
           </a>
-          <a href="/services" className="hover:text-gray-300">
+          <a href="/services" className="hover:text-gray-400">
             Services
           </a>
-          <a href="/clients" className="hover:text-gray-300">
+          <a href="/clients" className="hover:text-gray-400">
             Clients
           </a>
           {/* <a href="/career" className="hover:text-gray-300">
