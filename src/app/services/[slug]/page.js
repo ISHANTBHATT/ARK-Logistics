@@ -159,95 +159,160 @@
 "use client";
 import { useRouter, useParams } from "next/navigation";
 import Link from "next/link";
-import { Briefcase, Building, Box, Leaf, ArrowLeft } from "lucide-react";
+import {
+  Briefcase,
+  Building,
+  Box,
+  Leaf,
+  ArrowLeft,
+  Globe,
+  ChartNoAxesCombined,
+  Ship,
+} from "lucide-react";
 import { motion } from "framer-motion";
 
 const services = [
+  // {
+  //   id: "01",
+  //   title: "Consultancy",
+  //   slug: "consultancy",
+  //   icon: Briefcase,
+  //   description:
+  //     "The ARK team brings extensive expertise in Liner Shipping, Ports & Terminals, Digitalization in Shipping, and Vessel Agency that can be utilized for your organization. Additionally, we offer advisory services for regional representation, which includes the commercialization of your products and services, business development, and navigating regulatory processes.",
+  //   content: {
+  //     image: "/images/2.jpg",
+  //     intro: "Consultancy",
+  //     paragraphs: [
+  //       "We offer consultancy services across various facets of the maritime industry, including:",
+  //     ],
+  //     servicesInclude: [
+  //       "Ports & Terminals in the Middle East & Africa: Our in-depth analysis covers port ecosystems, examining different terminal types (bulk, breakbulk, container, offshore & supply, cruise, and leisure). We also assess port users, cargo services, and additional third-party services that ports can offer.",
+  //       "Container Terminal Expertise: We provide capacity and throughput analysis for container terminals. Our insights include competitive scenarios for terminals in the region and projections for future developments.",
+  //       "Advisory for NVOC Setup and Development: We assist with agency negotiations and selection, as well as the creation of standard operating procedures (SOPs) for all operational, documentation, customer service, and trade management aspects.",
+  //       "Specialized Consulting for Maritime Services: Our consulting focuses on the commercialization and development of maritime services at ports, including agency work, vessel husbanding, bunkering, and other marine services.",
+  //       "Commercial Excellence for Maritime Professionals: We highlight best practices in CRM management, budgeting principles, business intelligence, and more.",
+  //       "Commercial Team Management: We support sales team setup, recruitment, training, variable pay mechanisms, and target/KPI setting.",
+  //     ],
+  //   },
+  // },
+  // {
+  //   id: "02",
+  //   title: "Agency",
+  //   slug: "agency",
+  //   icon: Building,
+  //   description:
+  //     "We offer a range of services including port clearance, cargo handling, crew and immigration assistance, and various administrative tasks. With our own offices in East Africa, we provide comprehensive commercial agency services for both vessel operators and NVOCs.",
+  //   content: {
+  //     image: "/images/2.jpg",
+  //     intro: "Agency",
+  //     paragraphs: [
+  //       "We offer a range of services including port clearance, cargo handling, crew and immigration assistance, and various administrative tasks. With our own offices in East Africa, we provide comprehensive commercial agency services for both vessel operators and NVOCs.",
+  //       "Port procedures vary depending on the port of call, but generally, we follow these steps:",
+  //     ],
+  //     servicesInclude: [
+  //       "Collaborating with port authorities to secure necessary permits and clearances for the vessel's arrival and departure.",
+  //       "Collaborating with port authorities to secure necessary permits and clearances for the vessel's arrival and departure.",
+  //       "Working alongside stevedores and terminal operators to streamline cargo loading and unloading processes.",
+  //       "Arranging for bunkering, fresh water, and other supplies to be delivered to the vessel.",
+  //       "Coordinating with immigration and customs officials to support crew changes, visa requirements, and customs clearances.",
+  //       "Partnering with surveyors, repair teams, and other service providers to address any maintenance or repair needs for the vessel.",
+  //       "Managing administrative responsibilities, including documenting the vessel's movements and submitting required reports to port authorities and the principal.",
+  //       "Providing regular updates and maintaining communication with the principal about the vessel's status and any issues that arise during the port call.",
+  //     ],
+  //   },
+  // },
+  // {
+  //   id: "03",
+  //   title: "Green Crew Change",
+  //   slug: "green-crew-change",
+  //   icon: Leaf,
+  //   description:
+  //     "One of our primary services is enabling Shipowners and managers to transition their current crew change processes to a Green mode. This involves a systematic analysis of process changes to replace existing procedures with those that minimize carbon emissions.",
+  //   content: {
+  //     image: "/images/2.jpg",
+  //     intro: "Green Crew Change",
+  //     paragraphs: [
+  //       "One of our primary services is enabling Shipowners and managers to transition their current crew change processes to a Green mode. This involves a systematic analysis of process changes to replace existing procedures with those that minimize carbon emissions.",
+  //       "Our dedicated team will guarantee that every step of the journey—from crew pick-up at the airport or vessel to drop-off at the airport or vessel—utilizes eco-friendly practices. We will employ electric vehicles and partner with hotels that have been audited for their reduced carbon footprint. Throughout the entire journey, our team will document all aspects and provide a comprehensive report on the carbon reduction calculations.",
+  //       "This allows Shipowners and managers to accurately document their carbon reduction efforts, which can be included in the mandatory ESG reporting, ensuring they contribute to a cleaner and more sustainable future.",
+  //     ],
+  //     servicesInclude: [],
+  //   },
+  // },
+  // {
+  //   id: "04",
+  //   title: "Cargo",
+  //   slug: "cargo",
+  //   icon: Box,
+  //   description:
+  //     "Whether you need to ship in single container loads or in bulk, we offer comprehensive solutions for all your supply chain needs. Ensuring you work with just one vendor who delivers clear, transparent, and timely information. We collaborate with dependable partners to connect FOB cargo with CRF cargo.",
+  //   content: {
+  //     image: "/images/2.jpg",
+  //     intro: "Cargo",
+  //     paragraphs: [
+  //       "We assist with your cargo movement needs through our extensive network of Liner, Breakbulk, and Bulk carriers. Our service offers seamless integration across all transport modes, ensuring you have complete visibility and transparency throughout the entire movement process. For both FCL and LCL shipments, we provide a range of options across various carriers, allowing you to secure the best price for maximum value.",
+  //       "Our dedicated team collaborates with multiple stakeholders, including ocean carriers, air carriers, truckers, customs officials, cargo handlers, and others, based on your instructions, to give you a comprehensive overview of your cargo movements.",
+  //       "At ARK, we also have a team of seasoned cargo brokers who specialize in sourcing and providing transport options for bulk cargo across the globe. Our expertise encompasses the movement of commodities such as grains, fertilizers, and construction materials in bulk, as well as steel coils, RORO, and project cargoes in Breakbulk.",
+  //       "We are specialized agency and logistics service providers in East Africa, with our own offices and extensive experience in cargo sourcing.",
+  //       "Contact us today for any of your cargo movement requirements.",
+  //     ],
+  //     servicesInclude: [],
+  //   },
+  // },
   {
     id: "01",
-    title: "Consultancy",
-    slug: "consultancy",
-    icon: Briefcase,
+    title: "Representation",
+    slug: "representation",
+    icon: Globe,
     description:
-      "The ARK team brings extensive expertise in Liner Shipping, Ports & Terminals, Digitalization in Shipping, and Vessel Agency that can be utilized for your organization. Additionally, we offer advisory services for regional representation, which includes the commercialization of your products and services, business development, and navigating regulatory processes.",
+      "ARK Logistics & Maritime serves as a key representative for maritime entities across the Middle East, covering over 35 major ports and numerous secondary and tertiary ports.",
     content: {
       image: "/images/2.jpg",
       intro: "Consultancy",
-      paragraphs: [
-        "We offer consultancy services across various facets of the maritime industry, including:",
-      ],
+      paragraphs: [],
       servicesInclude: [
-        "Ports & Terminals in the Middle East & Africa: Our in-depth analysis covers port ecosystems, examining different terminal types (bulk, breakbulk, container, offshore & supply, cruise, and leisure). We also assess port users, cargo services, and additional third-party services that ports can offer.",
-        "Container Terminal Expertise: We provide capacity and throughput analysis for container terminals. Our insights include competitive scenarios for terminals in the region and projections for future developments.",
-        "Advisory for NVOC Setup and Development: We assist with agency negotiations and selection, as well as the creation of standard operating procedures (SOPs) for all operational, documentation, customer service, and trade management aspects.",
-        "Specialized Consulting for Maritime Services: Our consulting focuses on the commercialization and development of maritime services at ports, including agency work, vessel husbanding, bunkering, and other marine services.",
-        "Commercial Excellence for Maritime Professionals: We highlight best practices in CRM management, budgeting principles, business intelligence, and more.",
-        "Commercial Team Management: We support sales team setup, recruitment, training, variable pay mechanisms, and target/KPI setting.",
+        "We manage a fleet of more than 3,000 UAE-flagged vessels, with 596 currently active, distributed across countries like Saudi Arabia, Qatar, Oman, Kuwait, and Bahrain.",
+        "By partnering with us, your organization can gain official representation in the region, symbolized by your flag on the map, and immediate access to local services such as regulatory compliance, procurement, and payment processes.",
+        "Our involvement with local associations, regulatory bodies, and industry events enhances your organization's reputation as a thought leader in your industry.",
+        "Additionally, we offer cost-effective representation and utilize local facilities for meetings with customers and stakeholders, ensuring your organization's influential presence in the Middle Eastern maritime sector",
       ],
     },
   },
   {
     id: "02",
-    title: "Agency",
-    slug: "agency",
-    icon: Building,
+    title: "Commodity Trading",
+    slug: "commodity-trading",
+    icon: ChartNoAxesCombined,
     description:
-      "We offer a range of services including port clearance, cargo handling, crew and immigration assistance, and various administrative tasks. With our own offices in East Africa, we provide comprehensive commercial agency services for both vessel operators and NVOCs.",
+      "ARK Logistics & Maritime Commodity Trading has revolutionized the transportation and trading of raw materials by seamlessly connecting global sellers and buyers.",
     content: {
       image: "/images/2.jpg",
       intro: "Agency",
-      paragraphs: [
-        "We offer a range of services including port clearance, cargo handling, crew and immigration assistance, and various administrative tasks. With our own offices in East Africa, we provide comprehensive commercial agency services for both vessel operators and NVOCs.",
-        "Port procedures vary depending on the port of call, but generally, we follow these steps:",
-      ],
+      paragraphs: [],
       servicesInclude: [
-        "Collaborating with port authorities to secure necessary permits and clearances for the vessel's arrival and departure.",
-        "Collaborating with port authorities to secure necessary permits and clearances for the vessel's arrival and departure.",
-        "Working alongside stevedores and terminal operators to streamline cargo loading and unloading processes.",
-        "Arranging for bunkering, fresh water, and other supplies to be delivered to the vessel.",
-        "Coordinating with immigration and customs officials to support crew changes, visa requirements, and customs clearances.",
-        "Partnering with surveyors, repair teams, and other service providers to address any maintenance or repair needs for the vessel.",
-        "Managing administrative responsibilities, including documenting the vessel's movements and submitting required reports to port authorities and the principal.",
-        "Providing regular updates and maintaining communication with the principal about the vessel's status and any issues that arise during the port call.",
+        "We provide a complete solution that simplifies the logistics involved in maritime commodity trading. Our primary products in this sector include steel, bitumen, and fertilizers.",
+        "Bridging the gap between sellers offering their cargo on FOB terms and buyers requiring delivery on CRF/CIF terms.",
+        "Our seasoned team of commodity brokers leverages an expansive network of buyers and sellers to enhance value in both time and cost for our clients.",
+        "With a solid five-year history of successfully sourcing, transporting, and selling steel products, ARK has established a stellar reputation for reliability and customer satisfaction, making us a trusted partner in the world of maritime logistics and commodity trading.",
       ],
     },
   },
   {
     id: "03",
-    title: "Green Crew Change",
-    slug: "green-crew-change",
-    icon: Leaf,
+    title: "Freight Brokerage",
+    slug: "freight-brokerage",
+    icon: Ship,
     description:
-      "One of our primary services is enabling Shipowners and managers to transition their current crew change processes to a Green mode. This involves a systematic analysis of process changes to replace existing procedures with those that minimize carbon emissions.",
+      "We also provide Freight Brokerage services, which serve as a middleman role. In this capacity, the company purchases and sells freight, primarily container space, from regional feeder operators and then sells it to Carriers and NVOs.",
     content: {
       image: "/images/2.jpg",
       intro: "Green Crew Change",
-      paragraphs: [
-        "One of our primary services is enabling Shipowners and managers to transition their current crew change processes to a Green mode. This involves a systematic analysis of process changes to replace existing procedures with those that minimize carbon emissions.",
-        "Our dedicated team will guarantee that every step of the journey—from crew pick-up at the airport or vessel to drop-off at the airport or vessel—utilizes eco-friendly practices. We will employ electric vehicles and partner with hotels that have been audited for their reduced carbon footprint. Throughout the entire journey, our team will document all aspects and provide a comprehensive report on the carbon reduction calculations.",
-        "This allows Shipowners and managers to accurately document their carbon reduction efforts, which can be included in the mandatory ESG reporting, ensuring they contribute to a cleaner and more sustainable future.",
+      paragraphs: [],
+      servicesInclude: [
+        "Our Freight Brokerage services streamline the shipping process by efficiently matching available container space from regional feeder operators with the specific needs of carriers and Non-Vessel Operating Common Carriers (NVOs), ensuring optimal logistics solutions.",
+        "By leveraging our extensive network and industry expertise, we negotiate competitive rates and terms, allowing our clients to benefit from cost-effective shipping options while maintaining high service quality.",
+        "Additionally, we provide real-time tracking and support throughout the shipping process, ensuring transparency and reliability, which helps our clients manage their supply chains more effectively.",
       ],
-      servicesInclude: [],
-    },
-  },
-  {
-    id: "04",
-    title: "Cargo",
-    slug: "cargo",
-    icon: Box,
-    description:
-      "Whether you need to ship in single container loads or in bulk, we offer comprehensive solutions for all your supply chain needs. Ensuring you work with just one vendor who delivers clear, transparent, and timely information. We collaborate with dependable partners to connect FOB cargo with CRF cargo.",
-    content: {
-      image: "/images/2.jpg",
-      intro: "Cargo",
-      paragraphs: [
-        "We assist with your cargo movement needs through our extensive network of Liner, Breakbulk, and Bulk carriers. Our service offers seamless integration across all transport modes, ensuring you have complete visibility and transparency throughout the entire movement process. For both FCL and LCL shipments, we provide a range of options across various carriers, allowing you to secure the best price for maximum value.",
-        "Our dedicated team collaborates with multiple stakeholders, including ocean carriers, air carriers, truckers, customs officials, cargo handlers, and others, based on your instructions, to give you a comprehensive overview of your cargo movements.",
-        "At ARK, we also have a team of seasoned cargo brokers who specialize in sourcing and providing transport options for bulk cargo across the globe. Our expertise encompasses the movement of commodities such as grains, fertilizers, and construction materials in bulk, as well as steel coils, RORO, and project cargoes in Breakbulk.",
-        "We are specialized agency and logistics service providers in East Africa, with our own offices and extensive experience in cargo sourcing.",
-        "Contact us today for any of your cargo movement requirements.",
-      ],
-      servicesInclude: [],
     },
   },
 ];

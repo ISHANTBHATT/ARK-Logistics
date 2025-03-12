@@ -127,7 +127,16 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Plane, Truck, Ship, CheckCircle2, Briefcase, Box } from "lucide-react";
+import {
+  Plane,
+  Truck,
+  Ship,
+  CheckCircle2,
+  Briefcase,
+  Box,
+  Globe,
+  ChartNoAxesCombined,
+} from "lucide-react";
 import Link from "next/link";
 
 export function HeroSection() {
@@ -147,13 +156,13 @@ export function HeroSection() {
             className="p-10 border group hover:shadow-lg transition-shadow"
           >
             <div className="flex gap-4 items-center">
-              <Briefcase className="w-12 h-12 text-red-600 mb-4" />
+              <Globe className="w-12 h-12 text-red-600 mb-4" />
               <h3 className="text-2xl font-bold mb-4">Consulting</h3>
             </div>
             <p className="text-gray-600">
-              The ARK team brings extensive expertise in Liner Shipping, Ports &
-              Terminals, Digitalization in Shipping, and Vessel Agency that can
-              be utilized for your organization.
+              ARK Logistics & Maritime serves as a key representative for
+              maritime entities across the Middle East, covering over 35 major
+              ports and numerous secondary and tertiary ports.
             </p>
           </motion.div>
 
@@ -163,13 +172,13 @@ export function HeroSection() {
             className="p-10 border hover:shadow-lg transition-shadow"
           >
             <div className="flex gap-4 items-center">
-              <Ship className="w-12 h-12 text-red-600 mb-4" />
+              <ChartNoAxesCombined className="w-12 h-12 text-red-600 mb-4" />
               <h3 className="text-2xl font-bold mb-4">Vessels</h3>
             </div>
             <p className="text-gray-600">
-              Our extensive presence and coverage across the Middle East and
-              Africa guarantee that your vessel and crew are secure in any port
-              of call.
+              ARK Logistics & Maritime Commodity Trading has revolutionized the
+              transportation and trading of raw materials by seamlessly
+              connecting global sellers and buyers.
             </p>
           </motion.div>
 
@@ -179,12 +188,14 @@ export function HeroSection() {
             className="p-10 border hover:shadow-lg transition-shadow"
           >
             <div className="flex gap-4 items-center">
-              <Box className="w-12 h-12 text-red-600 mb-4" />
+              <Ship className="w-12 h-12 text-red-600 mb-4" />
               <h3 className="text-2xl font-bold mb-4">Cargo</h3>
             </div>
             <p className="text-gray-600">
-              Whether you need to ship in single container loads or in bulk, we
-              offer comprehensive solutions for all your supply chain needs.
+              We also provide Freight Brokerage services, which serve as a
+              middleman role. In this capacity, the company purchases and sells
+              freight, primarily container space, from regional feeder operators
+              and then sells it to Carriers and NVOs.
             </p>
           </motion.div>
         </div>

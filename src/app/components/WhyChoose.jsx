@@ -127,27 +127,27 @@ export function WhyChoose() {
     {
       title: "Express Air Transport",
       description:
-        "Exceptional service tailored to meet the unique needs of each client.",
+        "Key representative for maritime entities across the Middle East, covering over 35 major ports and numerous secondary and tertiary ports.",
       icon: Plane,
     },
     {
       title: "Maximum Cargo Flexibility",
       description:
-        "Experienced team of professionals ensures timely and efficient transportation solutions.",
+        "Our commodity trading has revolutionized the transportation and trading of raw materials by seamlessly connecting global sellers and buyers.",
       icon: Package,
     },
     {
       title: "Personalized Shipping Solutions",
       description:
-        "Cutting-edge technology and industry expertise to offer reliable and cost-effective logistics options.",
+        "Through our vast network and industry knowledge, our clients enjoy affordable shipping solutions without compromising on service quality.",
       icon: Users,
     },
-    {
-      title: "Maximum Cargo Flexibility",
-      description:
-        "Commitment to sustainability and adherence to the highest safety standards set us apart as a leader in the industry.",
-      icon: Truck,
-    },
+    // {
+    //   title: "Maximum Cargo Flexibility",
+    //   description:
+    //     "Commitment to sustainability and adherence to the highest safety standards set us apart as a leader in the industry.",
+    //   icon: Truck,
+    // },
   ];
 
   const containerVariants = {

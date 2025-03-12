@@ -6,17 +6,17 @@ const videos = [
   {
     id: 1,
     url: "videos/1.mp4",
-    title: "Consultancy",
+    title: "Representation",
   },
   {
     id: 2,
     url: "videos/2.mp4",
-    title: "Vessel",
+    title: "Trading",
   },
   {
     id: 3,
     url: "videos/4.mp4",
-    title: "Cargo",
+    title: "Freight Services",
   },
 ];
 

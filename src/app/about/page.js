@@ -255,10 +255,10 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
 const features = [
-  "Exceptional service tailored to meet the unique needs of each client.",
-  "Experienced team of professionals ensures timely and efficient transportation solutions.",
-  "Cutting-edge technology and industry expertise to offer reliable and cost-effective logistics options.",
-  "Commitment to sustainability and adherence to the highest safety standards set us apart as a leader in the industry.",
+  "Personalized service designed to address the specific needs of each client.",
+  "A skilled team of professionals guarantees timely and efficient transportation solutions.",
+  "Advanced technology and industry knowledge provide reliable and cost-effective logistics options.",
+  "Our dedication to sustainability and adherence to the highest safety standards distinguishes us as an industry leader.",
 ];
 
 const logos = [
@@ -363,20 +363,39 @@ const Page = () => {
                   Why Choose ARK Logistics & Maritime
                 </h3>
                 <p className="text-gray-600 mb-8">
-                  ARK Logistics & Maritime is a collaboration of like-minded
-                  professionals who recognized the need for professional and
-                  dependable services in the region. The team boasts a robust
-                  background in cargo and ocean-related activities, along with a
-                  powerful network in the area that can be effectively utilized.
+                  ARK Logistics & Maritime is a partnership of like-minded
+                  experts who identified the demand for reliable and
+                  professional services in the region. The team has a solid
+                  background in cargo and maritime activities, complemented by a
+                  strong local network that can be effectively leveraged.
                 </p>
                 <p className="text-gray-600 mb-8">
-                  With experience in corporate settings, the team possesses both
-                  the vision and the capability to execute plans, positioning
-                  ARK L&M for a successful future. They have significant
-                  experience working with top-tier companies, including major
-                  liner, logistics, and maritime service providers.
-                  Additionally, the team is well-versed in handling bulk
-                  commodities, RO-RO shipments, project cargoes, and containers.
+                  With extensive experience in corporate environments, the team
+                  combines vision with the ability to implement plans, setting
+                  ARK L&M up for future success. They have worked with esteemed
+                  companies, including leading liner, logistics, and maritime
+                  service providers. Furthermore, they possess expertise in
+                  managing bulk commodities, RO-RO shipments, project cargo, and
+                  containers.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  ARK offers a wide range of services, including:
+                </p>
+                <p className="text-gray-600 ">
+                  <span className="font-bold"> Representation Services: </span>{" "}
+                  Acting on behalf of clients to ensure their interests are
+                  well-represented in all maritime and logistics dealings.
+                </p>
+                <p className="text-gray-600">
+                  <span className="font-bold">Commodity Trading:</span>{" "}
+                  Facilitating the buying and selling of various bulk
+                  commodities, leveraging market knowledge for optimal trading
+                  outcomes.
+                </p>
+                <p className="text-gray-600 mb-8">
+                  <span className="font-bold">Freight Brokerage:</span>{" "}
+                  Connecting shippers with carriers to ensure efficient and
+                  cost-effective transportation solutions.
                 </p>
               </motion.div>
 
@@ -439,16 +458,16 @@ const Page = () => {
                 <h1 className="text-4xl font-bold">Mission</h1>
               </div>
               <h2 className="text-sm md:text-lg  mb-2">
-                Our goal is to offer personalized and dependable maritime
-                services that surpass the expectations of our clients in the
-                Middle East and Africa. We are dedicated to delivering
-                exceptional value through our skilled team, innovative
-                solutions, and robust partnerships. We aim to foster long-term
+                Our objective is to provide tailored and reliable maritime
+                services that exceed the expectations of our clients in the
+                Middle East and Africa. We are committed to delivering
+                exceptional value through our expert team, innovative solutions,
+                and strong partnerships. Our focus is on building long-term
                 relationships with our customers, earning their trust by
-                providing outstanding service, responsiveness, and meticulous
+                offering outstanding service, prompt responses, and meticulous
                 attention to detail. Our mission is to become the preferred
-                partner for our clients, consistently ensuring the highest
-                standards of quality and reliability in every facet of our
+                partner for our clients, consistently upholding the highest
+                standards of quality and reliability across all aspects of our
                 operations.
               </h2>
             </motion.div>
@@ -490,20 +509,18 @@ const Page = () => {
                 <h1 className="text-3xl font-bold">Vision</h1>
               </div>
               <h2 className="text-lg  mb-2">
-                Our goal is to become the preferred partner for customers
-                seeking personalized maritime services in the Middle East and
-                Africa.We strive to achieve this by continuously improving our
-                offerings and staying attuned to the evolving needs of the
-                industry. Our team is committed to innovation and excellence,
-                ensuring that every service we provide is tailored to meet the
-                unique requirements of our clients.
+                We aim to accomplish our mission by consistently enhancing our
+                offerings and remaining responsive to the changing demands of
+                the industry. Our dedicated team is focused on innovation and
+                excellence, making sure that every service we deliver is
+                customized to meet the specific needs of our clients.
               </h2>
             </motion.div>
           </div>
         </motion.div>
       </div>
 
-      <Parallax />
+      {/* <Parallax /> */}
     </>
   );
 };

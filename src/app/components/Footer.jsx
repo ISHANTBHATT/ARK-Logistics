@@ -302,8 +302,8 @@ const Footer = () => {
             <span className="font-bold text-xl">ARK Logistics & Maritime</span>
           </div>
           <p className="text-sm">
-            ARK Logo | Copyright (C) 2025. Website Designed and Developed by
-            Apace Digital Cargo LLP
+            Copyright (C) 2025. Website Designed and Developed by Apace Digital
+            Cargo LLP
           </p>
         </motion.div>
       </div>
