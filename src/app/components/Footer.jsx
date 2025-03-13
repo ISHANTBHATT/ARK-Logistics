@@ -303,7 +303,7 @@ const Footer = () => {
           </div>
           <p className="text-sm">
             Copyright (C) 2025. Website Designed and Developed by Apace Digital
-            Cargo LLP
+            Cargo
           </p>
         </motion.div>
       </div>
