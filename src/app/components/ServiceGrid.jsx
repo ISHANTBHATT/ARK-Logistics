@@ -285,7 +285,7 @@ const services = [
     slug: "freight-brokerage",
     description:
       "Contrary to popular belief, Lorem Ipsum is not simply random text.",
-    hoverImage: "/images/green.jpg",
+    hoverImage: "/images/brokerage.jpg",
   },
   // {
   //   title: "Cargo",
@@ -329,7 +329,7 @@ function ServiceCard({ service, index }) {
           alt="Arrow"
         />
       </motion.div>
-
+      <div className="absolute inset-0  group-hover:bg-black/30" />
       {/* Content */}
       <motion.div
         className="absolute inset-0 p-8 flex flex-col justify-end text-white"
