@@ -267,33 +267,33 @@ import Link from "next/link";
 
 const services = [
   {
-    title: "Consultancy",
-    slug: "consultancy",
+    title: "Representation",
+    slug: "representation",
     description:
       "Contrary to popular belief, Lorem Ipsum is not simply random text.",
     hoverImage: "/images/Consultancy.jpg",
   },
   {
-    title: "Agency",
-    slug: "agency",
+    title: "Commodity Trading",
+    slug: "commodity-trading",
     description:
       "Contrary to popular belief, Lorem Ipsum is not simply random text.",
     hoverImage: "/images/agency.jpg",
   },
   {
-    title: "Green Crew Change",
-    slug: "green-crew-change",
+    title: "Freight Brokerage",
+    slug: "freight-brokerage",
     description:
       "Contrary to popular belief, Lorem Ipsum is not simply random text.",
     hoverImage: "/images/green.jpg",
   },
-  {
-    title: "Cargo",
-    slug: "cargo",
-    description:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text.",
-    hoverImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d",
-  },
+  // {
+  //   title: "Cargo",
+  //   slug: "cargo",
+  //   description:
+  //     "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+  //   hoverImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d",
+  // },
 ];
 
 function ServiceCard({ service, index }) {
@@ -438,7 +438,7 @@ function ServiceGrid() {
           />
 
           {/* Services Grid */}
-          <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
+          <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
             {services.map((service, index) => (
               <ServiceCard key={index} service={service} index={index} />
             ))}

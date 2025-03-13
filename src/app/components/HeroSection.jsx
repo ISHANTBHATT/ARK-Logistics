@@ -157,7 +157,7 @@ export function HeroSection() {
           >
             <div className="flex gap-4 items-center">
               <Globe className="w-12 h-12 text-red-600 mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Consulting</h3>
+              <h3 className="text-2xl font-bold mb-4">Representation</h3>
             </div>
             <p className="text-gray-600">
               ARK Logistics & Maritime serves as a key representative for
@@ -173,7 +173,7 @@ export function HeroSection() {
           >
             <div className="flex gap-4 items-center">
               <ChartNoAxesCombined className="w-12 h-12 text-red-600 mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Vessels</h3>
+              <h3 className="text-2xl font-bold mb-4">Commodity Trading</h3>
             </div>
             <p className="text-gray-600">
               ARK Logistics & Maritime Commodity Trading has revolutionized the
@@ -189,7 +189,7 @@ export function HeroSection() {
           >
             <div className="flex gap-4 items-center">
               <Ship className="w-12 h-12 text-red-600 mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Cargo</h3>
+              <h3 className="text-2xl font-bold mb-4">Freight Brokerage</h3>
             </div>
             <p className="text-gray-600">
               We also provide Freight Brokerage services, which serve as a

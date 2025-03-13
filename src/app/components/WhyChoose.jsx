@@ -95,7 +95,16 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Plane, Package, Users, Truck } from "lucide-react";
+import {
+  ArrowRight,
+  Plane,
+  Package,
+  Users,
+  Truck,
+  Globe,
+  Ship,
+  ChartNoAxesCombined,
+} from "lucide-react";
 import { LiaAnchorSolid } from "react-icons/lia";
 function ServiceItem({ title, description, icon: Icon }) {
   return (
@@ -108,7 +117,7 @@ function ServiceItem({ title, description, icon: Icon }) {
         <Icon size={32} />
       </div>
       <div className="flex-1">
-        <h3 className="text-2xl font-bold mb-2">{title}</h3>
+        {/* <h3 className="text-2xl font-bold mb-2">{title}</h3> */}
         <p className="text-gray-600 pr-4">{description}</p>
       </div>
       <motion.div
@@ -128,19 +137,19 @@ export function WhyChoose() {
       title: "Express Air Transport",
       description:
         "Key representative for maritime entities across the Middle East, covering over 35 major ports and numerous secondary and tertiary ports.",
-      icon: Plane,
+      icon: Globe,
     },
     {
       title: "Maximum Cargo Flexibility",
       description:
         "Our commodity trading has revolutionized the transportation and trading of raw materials by seamlessly connecting global sellers and buyers.",
-      icon: Package,
+      icon: ChartNoAxesCombined,
     },
     {
       title: "Personalized Shipping Solutions",
       description:
         "Through our vast network and industry knowledge, our clients enjoy affordable shipping solutions without compromising on service quality.",
-      icon: Users,
+      icon: Ship,
     },
     // {
     //   title: "Maximum Cargo Flexibility",
@@ -182,7 +191,7 @@ export function WhyChoose() {
           </h1>
           <div className="flex items-center space-x-4">
             <a
-              href="#"
+              href="/about"
               className="text-red-600 font-semibold hover:text-red-700 flex items-center"
             >
               Read More
