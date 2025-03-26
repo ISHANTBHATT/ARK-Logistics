@@ -42,46 +42,32 @@ function Page() {
 }
 export const projects = [
   {
-    title: "Stripe",
-    image: "/images/client1.png",
+    title: "CeeKay Shipping",
+    image: "/images/clients1.png",
     description:
       "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
+    link: "https://ceekayshipping.com/",
   },
   {
-    title: "Netflix",
-    image: "/images/client2.png",
+    title: "DSV",
+    image: "/images/clients2.png",
     description:
       "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-    link: "https://netflix.com",
+    link: "https://www.dsv.com/en-ae/about-dsv/dsv-mena/united-arab-emirates",
   },
   {
-    title: "Google",
-    image: "/images/client3.png",
+    title: "BCG",
+    image: "/images/clients3.png",
     description:
       "A multinational technology company that specializes in Internet-related services and products.",
-    link: "https://google.com",
+    link: "https://www.bcg.com/industries/transportation-logistics/shipping-industry",
   },
   {
-    title: "Meta",
-    image: "/images/client8.png",
+    title: "MAK Container Lines",
+    image: "/images/clients4.png",
     description:
       "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    link: "https://meta.com",
-  },
-  {
-    title: "Amazon",
-    image: "/images/client1.png",
-    description:
-      "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-    link: "https://amazon.com",
-  },
-  {
-    title: "Microsoft",
-    image: "/images/client2.png",
-    description:
-      "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-    link: "https://microsoft.com",
+    link: "https://makcontainerline.com",
   },
 ];
 

@@ -11,6 +11,7 @@ import {
   Globe,
   ChartNoAxesCombined,
   Ship,
+  Forklift,
 } from "lucide-react";
 // import {
 //   Truck,
@@ -105,7 +106,6 @@ const services = [
       intro: "Representation",
       paragraphs: [],
       servicesInclude: [
-        "We manage a fleet of more than 3,000 UAE-flagged vessels, with 596 currently active, distributed across countries like Saudi Arabia, Qatar, Oman, Kuwait, and Bahrain.",
         "By partnering with us, your organization can gain official representation in the region, symbolized by your flag on the map, and immediate access to local services such as regulatory compliance, procurement, and payment processes.",
         "Our involvement with local associations, regulatory bodies, and industry events enhances your organization's reputation as a thought leader in your industry.",
         "Additionally, we offer cost-effective representation and utilize local facilities for meetings with customers and stakeholders, ensuring your organization's influential presence in the Middle Eastern maritime sector",
@@ -147,6 +147,22 @@ const services = [
         "By leveraging our extensive network and industry expertise, we negotiate competitive rates and terms, allowing our clients to benefit from cost-effective shipping options while maintaining high service quality.",
         "Additionally, we provide real-time tracking and support throughout the shipping process, ensuring transparency and reliability, which helps our clients manage their supply chains more effectively.",
       ],
+    },
+  },
+  {
+    id: "04",
+    title: "Logistics",
+    slug: "logistics",
+    icon: Forklift,
+    description:
+      "We provide Logistics design solutions focused on Africa, ensuring transparency  and visibility. Our expertise within Project logistics ensures that your cargo is safely and efficiently delivered within the African hinterland.",
+    content: {
+      image: "/images/2.jpg",
+      intro: "Green Crew Change",
+      paragraphs: [
+        "We provide Logistics design solutions focused on Africa, ensuring transparency  and visibility. Our expertise within Project logistics ensures that your cargo is safely and efficiently delivered within the African hinterland.",
+      ],
+      servicesInclude: [],
     },
   },
   // {

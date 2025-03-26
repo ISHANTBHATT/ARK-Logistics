@@ -8,12 +8,7 @@ export const HoverEffect = ({ items, className }) => {
   let [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <div
-      className={cn(
-        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10",
-        className
-      )}
-    >
+    <div className={cn("grid grid-cols-1 md:grid-cols-2  py-10", className)}>
       {items.map((item, idx) => (
         <Link
           href={item?.link}
@@ -40,13 +35,16 @@ export const HoverEffect = ({ items, className }) => {
             )}
           </AnimatePresence>
           <Card>
-            <Image
-              src={item.image}
-              alt={item.title}
-              width={300}
-              height={300}
-              className=""
-            />
+            <div className="flex justify-center">
+              <Image
+                src={item.image}
+                alt={item.title}
+                width={300}
+                height={300}
+                className=""
+              />
+            </div>
+
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
           </Card>
