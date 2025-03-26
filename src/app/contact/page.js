@@ -56,7 +56,7 @@ function Page() {
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.1 }}
           >
             <h2 className="text-4xl font-bold mb-6">Get In Touch</h2>
             <p className="text-gray-600 mb-8">
@@ -100,7 +100,7 @@ function Page() {
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.1 }}
             className="bg-primary p-8 rounded-xl shadow-lg"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -166,9 +166,9 @@ function Page() {
 
       {/* Map Section */}
       <motion.div
-        initial={{ opacity: 0, y: 500 }}
+        initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.1 }}
         className="w-full h-[450px] relative"
       >
         <iframe

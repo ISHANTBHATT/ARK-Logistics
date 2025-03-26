@@ -218,7 +218,7 @@ const Footer = () => {
       initial="hidden"
       whileInView="visible"
       variants={containerVariants}
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.1 }}
     >
       <div className="absolute inset-0 bg-black/30 z-10" />
       <div className="container mx-auto px-4 relative z-20">

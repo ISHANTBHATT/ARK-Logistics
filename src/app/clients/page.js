@@ -31,7 +31,7 @@ function Page() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           className="max-w-5xl mx-auto py-20 "
         >
           <HoverEffect items={projects} />

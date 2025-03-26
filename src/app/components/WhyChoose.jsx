@@ -181,7 +181,7 @@ export function WhyChoose() {
           initial={{ opacity: 0, y: -100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           className="flex justify-between py-10"
         >
           <h1 className="text-2xl md:text-5xl font-bold leading-tight">

@@ -302,7 +302,7 @@ function ServiceCard({ service, index }) {
       className="group relative h-[500px] overflow-hidden border-r-2 border-white"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{ delay: index * 0.2, duration: 0.6 }}
     >
       {/* Hover Image */}
@@ -416,9 +416,9 @@ function ServiceGrid() {
       {/* Header */}
       <motion.div
         className="py-16"
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.6 }}
       >
         <h2 className="text-5xl font-bold text-center mb-16">What We Offer</h2>
