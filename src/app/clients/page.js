@@ -27,7 +27,7 @@ function Page() {
           </div>
         </div>
       </div>
-      <div className="w-full h-full bg-gradient-to-b from-gray-50 to-white">
+      <div className="w-full min-h-screen bg-gradient-to-b from-gray-50 to-white">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}

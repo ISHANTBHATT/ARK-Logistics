@@ -247,7 +247,7 @@ const Page = () => {
       <section className="py-20 bg-gray-50 overflow-hidden">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, x: -500 }}
+            initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
