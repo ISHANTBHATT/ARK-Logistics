@@ -45,8 +45,8 @@ export const HoverEffect = ({ items, className }) => {
               />
             </div>
 
-            <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
+            {/* <CardTitle>{item.title}</CardTitle> */}
+            {/* <CardDescription>{item.description}</CardDescription> */}
           </Card>
         </Link>
       ))}
