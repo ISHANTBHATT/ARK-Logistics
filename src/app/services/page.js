@@ -290,7 +290,7 @@ const Page = () => {
                 <Link href={`/services/${service.slug}`}>
                   <button className="text-primary font-semibold hover:text-blue-900 transition-colors group flex items-center">
                     <ChevronRight className="text-[#004041] h-5 w-5 flex-shrink-0 hidden group-hover:block " />
-                    VIEW DETAIL
+                    Read More
                   </button>
                 </Link>
               </motion.div>
