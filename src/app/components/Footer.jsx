@@ -301,10 +301,16 @@ const Footer = () => {
             <LiaAnchorSolid className="w-8 h-8 text-white" />
             <span className="font-bold text-xl">ARK Logistics & Maritime</span>
           </div>
-          <p className="text-sm">
-            Copyright (C) 2025. Website Designed and Developed by Apace Digital
-            Cargo
-          </p>
+          <div className="text-sm">
+            Copyright (C) 2025. Website Designed and Developed by{" "}
+            <a
+              className="underline hover:text-secondary"
+              target="_blank"
+              href="https://apacedigitalcargo.com/"
+            >
+              Apace Digital Cargo
+            </a>
+          </div>
         </motion.div>
       </div>
     </motion.footer>
