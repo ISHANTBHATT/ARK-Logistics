@@ -192,19 +192,19 @@ const hoverEffect = {
 const links = [
   {
     title: "About Us",
-    link: "about",
+    link: "/about",
   },
   {
     title: "Services",
-    link: "services",
+    link: "/services",
   },
   {
     title: "Clients",
-    link: "clients",
+    link: "/clients",
   },
   {
     title: "Contact",
-    link: "contact",
+    link: "/contact",
   },
 ];
 
@@ -236,9 +236,9 @@ const Footer = () => {
           {/* Canada Office */}
           <motion.div variants={itemVariants}>
             <h3 className="text-xl font-semibold mb-4">
-              REPRESENTATION OFFICE
+              ARK REPRESENTATION OFFICE
             </h3>
-            <p className="mb-2">U.K | U.S.A and Australia</p>
+            <p className="mb-2">U.K | U.S.A and Australia | Kenya | Tanzania</p>
           </motion.div>
 
           {/* Useful Link */}

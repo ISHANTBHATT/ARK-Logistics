@@ -586,7 +586,7 @@ export function Banner() {
         muted
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
-        <source src="videos/6.mp4" type="video/mp4" />
+        <source src="/videos/6.mp4" type="video/mp4" />
       </motion.video>
       <div className="absolute inset-0 bg-black bg-opacity-30 md:bg-opacity-0"></div>
 

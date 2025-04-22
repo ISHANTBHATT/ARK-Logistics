@@ -372,9 +372,9 @@ const Page = () => {
                 <p className="text-gray-600 mb-8">
                   With extensive experience in corporate environments, the team
                   combines vision with the ability to implement plans, setting
-                  ARK L&M up for future success. They have worked with esteemed
+                  ARK L&M up for future success. We have worked with esteemed
                   companies, including leading liner, logistics, and maritime
-                  service providers. Furthermore, they possess expertise in
+                  service providers. Furthermore, we possess expertise in
                   managing bulk commodities, RO-RO shipments, project cargo, and
                   containers.
                 </p>

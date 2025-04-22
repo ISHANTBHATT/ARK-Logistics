@@ -267,6 +267,13 @@ import Link from "next/link";
 
 const services = [
   {
+    title: "Advisory",
+    slug: "advisory",
+    description:
+      "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+    hoverImage: "/images/Advisory.jpg",
+  },
+  {
     title: "Representation",
     slug: "representation",
     description:
@@ -287,13 +294,13 @@ const services = [
       "Contrary to popular belief, Lorem Ipsum is not simply random text.",
     hoverImage: "/images/brokerage.jpg",
   },
-  // {
-  //   title: "Cargo",
-  //   slug: "cargo",
-  //   description:
-  //     "Contrary to popular belief, Lorem Ipsum is not simply random text.",
-  //   hoverImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d",
-  // },
+  {
+    title: "Logistics",
+    slug: "logistics",
+    description:
+      "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+    hoverImage: "/images/Logistics.jpg",
+  },
 ];
 
 function ServiceCard({ service, index }) {
@@ -375,7 +382,7 @@ function ServiceGrid() {
       } else if (window.innerWidth < 1024) {
         numColumns = 2;
       } else {
-        numColumns = 4;
+        numColumns = 5;
       }
 
       const numRows = Math.ceil(numServices / numColumns);
@@ -438,7 +445,7 @@ function ServiceGrid() {
           />
 
           {/* Services Grid */}
-          <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
+          <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-0">
             {services.map((service, index) => (
               <ServiceCard key={index} service={service} index={index} />
             ))}

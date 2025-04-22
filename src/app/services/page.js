@@ -12,16 +12,8 @@ import {
   ChartNoAxesCombined,
   Ship,
   Forklift,
+  Compass,
 } from "lucide-react";
-// import {
-//   Truck,
-//   Ship,
-//   Plane,
-//   Train,
-//   Package,
-//   ClipboardList,
-//   ChevronRight,
-// } from "lucide-react";
 import { Testimonials3 } from "../components/Testimonials3";
 import Parallax from "../components/Parallex";
 import Link from "next/link";
@@ -96,14 +88,30 @@ const services = [
 
   {
     id: "01",
+    title: "Advisory",
+    slug: "advisory",
+    icon: Compass,
+    description:
+      "We are consultants specializing in the ports, shipping, and logistics sector, with a strong focus on the Middle East and Africa. Our Advisory supports companies looking to enter or expand in these regions by offering market insights, strategic guidance, and on-the-ground connections to help them navigate the complexities of local operations and drive sustainable growth.",
+    content: {
+      image: "/images/2.jpg",
+      paragraphs: [],
+      servicesInclude: [
+        "We provide specialized advisory services within the ports and terminals sector, with a particular emphasis on the commercial side of operations. This includes supporting concession and lease negotiations, developing pricing strategies and tariff structures, advising on cargo throughput optimization, evaluating revenue models, and guiding client engagement strategies for shipping lines, logistics providers, and other key stakeholders. Our role is to help operators and investors unlock commercial value, improve competitiveness, and align their terminal offerings with market demand.",
+        "We provide strategic insights into the liner shipping sector, focusing on key commercial functions such as network and service planning, trade lane analysis, pricing and yield management, customer segmentation, and negotiations with key clients and port stakeholders. We also assist with market entry strategies and optimizing commercial performance, helping carriers stay competitive and adapt to changing market dynamics.",
+        "We offer expert advisory on port agency functions, covering the full spectrum of services including vessel coordination, cargo handling, customs compliance, crew management, and port logistics. Our focus is on optimizing operations, ensuring smooth port calls, and providing seamless communication between shipping lines, terminal operators, and regulatory bodies to enhance efficiency and minimize delays.",
+      ],
+    },
+  },
+  {
+    id: "02",
     title: "Representation",
     slug: "representation",
     icon: Globe,
     description:
-      "ARK Logistics & Maritime serves as a key representative for maritime entities across the Middle East, covering over 35 major ports and numerous secondary and tertiary ports.",
+      "If you're a global shipping or logistics company looking to establish a presence in the Middle East, ARK Logistics & Maritime can represent you on the ground. We cover over 35 major ports across the region, plus a wide network of smaller ports, helping you tap into new opportunities without the need for a local office.",
     content: {
       image: "/images/2.jpg",
-      intro: "Representation",
       paragraphs: [],
       servicesInclude: [
         "By partnering with us, your organization can gain official representation in the region, symbolized by your flag on the map, and immediate access to local services such as regulatory compliance, procurement, and payment processes.",
@@ -113,7 +121,7 @@ const services = [
     },
   },
   {
-    id: "02",
+    id: "03",
     title: "Commodity Trading",
     slug: "commodity-trading",
     icon: ChartNoAxesCombined,
@@ -121,7 +129,6 @@ const services = [
       "ARK Logistics & Maritime Commodity Trading has revolutionized the transportation and trading of raw materials by seamlessly connecting global sellers and buyers.",
     content: {
       image: "/images/2.jpg",
-      intro: "Agency",
       paragraphs: [],
       servicesInclude: [
         "We provide a complete solution that simplifies the logistics involved in maritime commodity trading. Our primary products in this sector include steel, bitumen, and fertilizers.",
@@ -132,15 +139,14 @@ const services = [
     },
   },
   {
-    id: "03",
+    id: "04",
     title: "Freight Brokerage",
     slug: "freight-brokerage",
     icon: Ship,
     description:
-      "We also provide Freight Brokerage services, which serve as a middleman role. In this capacity, the company purchases and sells freight, primarily container space, from regional feeder operators and then sells it to Carriers and NVOs.",
+      "We also handle Freight Brokerage services, where we connect regional feeder operators with Carriers and NVOs. Basically, we secure container space and match it with those who need it most—helping our clients get better rates, save time, and keep things moving smoothly.",
     content: {
       image: "/images/2.jpg",
-      intro: "Green Crew Change",
       paragraphs: [],
       servicesInclude: [
         "Our Freight Brokerage services streamline the shipping process by efficiently matching available container space from regional feeder operators with the specific needs of carriers and Non-Vessel Operating Common Carriers (NVOs), ensuring optimal logistics solutions.",
@@ -150,7 +156,7 @@ const services = [
     },
   },
   {
-    id: "04",
+    id: "05",
     title: "Logistics",
     slug: "logistics",
     icon: Forklift,
@@ -158,7 +164,6 @@ const services = [
       "We provide Logistics design solutions focused on Africa, ensuring transparency  and visibility. Our expertise within Project logistics ensures that your cargo is safely and efficiently delivered within the African hinterland.",
     content: {
       image: "/images/2.jpg",
-      intro: "Green Crew Change",
       paragraphs: [
         "We provide Logistics design solutions focused on Africa, ensuring transparency  and visibility. Our expertise within Project logistics ensures that your cargo is safely and efficiently delivered within the African hinterland.",
       ],
