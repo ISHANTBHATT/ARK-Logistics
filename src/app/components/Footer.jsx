@@ -235,9 +235,7 @@ const Footer = () => {
 
           {/* Canada Office */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-xl font-semibold mb-4">
-              ARK REPRESENTATION OFFICE
-            </h3>
+            <h3 className="text-xl font-semibold mb-4">ARK REP OFFICES</h3>
             <p className="mb-2">U.K | U.S.A and Australia | Kenya | Tanzania</p>
           </motion.div>
 
@@ -256,6 +254,19 @@ const Footer = () => {
                   </a>
                 </motion.li>
               ))}
+              <motion.li
+                whileHover={{ x: 10 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <a
+                  href="ARK_STC.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gray-300"
+                >
+                  ARK Logistics & Maritime – Standard Terms & Conditions
+                </a>
+              </motion.li>
             </ul>
           </motion.div>
 

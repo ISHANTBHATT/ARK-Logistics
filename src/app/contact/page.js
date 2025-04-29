@@ -297,7 +297,8 @@ function Page() {
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
             viewport={{ once: true, amount: 0.1 }}
           >
             <h2 className="text-4xl font-bold mb-6">Get In Touch</h2>
@@ -341,7 +342,8 @@ function Page() {
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
             viewport={{ once: true, amount: 0.1 }}
             className="bg-primary p-8 rounded-xl shadow-lg"
           >

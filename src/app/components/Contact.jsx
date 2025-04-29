@@ -139,13 +139,11 @@ const Contact = () => {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <h3 className="text-xl font-semibold mb-4">
-                REPRESENTATION OFFICE
-              </h3>
+              <h3 className="text-xl font-semibold mb-4">ARK REP OFFICE</h3>
               <div className="space-y-2">
                 <p className="flex items-center gap-2">
                   <MapPin className="w-5 h-5 lg:w-8 lg:h-8" />
-                  U.K | U.S.A and Australia
+                  U.K | U.S.A and Australia | Kenya | Tanzania
                 </p>
                 {/* <p className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />

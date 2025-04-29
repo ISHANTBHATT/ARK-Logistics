@@ -135,6 +135,8 @@ import {
   Briefcase,
   Box,
   Globe,
+  Compass,
+  Forklift,
   ChartNoAxesCombined,
 } from "lucide-react";
 import Link from "next/link";
@@ -143,13 +145,32 @@ export function HeroSection() {
   return (
     <div className="h-full bg-white">
       {/* Service Cards */}
+
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-3 overflow-hidden pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 overflow-hidden pb-10">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="p-10 border hover:shadow-lg transition-shadow"
+          >
+            <div className="flex gap-4 items-center">
+              <Compass className="w-12 h-12 text-red-600 mb-4" />
+              <h3 className="text-2xl font-bold mb-4">Advisory</h3>
+            </div>
+            <p className="text-gray-600">
+              We are consultants specializing in the ports, shipping, and
+              logistics sector, with a strong focus on the Middle East and
+              Africa. Our Advisory supports companies looking to enter or expand
+              in these regions by offering market insights, strategic guidance,
+              and on-the-ground connections to help them navigate the
+              complexities of local operations and drive sustainable growth.
+            </p>
+          </motion.div>
+
           {/* Land Freight */}
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -160,9 +181,12 @@ export function HeroSection() {
               <h3 className="text-2xl font-bold mb-4">Representation</h3>
             </div>
             <p className="text-gray-600">
-              ARK Logistics & Maritime serves as a key representative for
-              maritime entities across the Middle East, covering over 35 major
-              ports and numerous secondary and tertiary ports.
+              If you're a global shipping or logistics company looking to
+              establish a presence in the Middle East, ARK Logistics & Maritime
+              can represent you on the ground. We cover over 35 major ports
+              across the region, plus a wide network of smaller ports, helping
+              you tap into new opportunities without the need for a local
+              office.
             </p>
           </motion.div>
 
@@ -192,10 +216,27 @@ export function HeroSection() {
               <h3 className="text-2xl font-bold mb-4">Freight Brokerage</h3>
             </div>
             <p className="text-gray-600">
-              We also provide Freight Brokerage services, which serve as a
-              middleman role. In this capacity, the company purchases and sells
-              freight, primarily container space, from regional feeder operators
-              and then sells it to Carriers and NVOs.
+              We also handle Freight Brokerage services, where we connect
+              regional feeder operators with Carriers and NVOs. Basically, we
+              secure container space and match it with those who need it
+              most—helping our clients get better rates, save time, and keep
+              things moving smoothly.
+            </p>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="p-10 border hover:shadow-lg transition-shadow"
+          >
+            <div className="flex gap-4 items-center">
+              <Forklift className="w-12 h-12 text-red-600 mb-4" />
+              <h3 className="text-2xl font-bold mb-4">Logistics</h3>
+            </div>
+            <p className="text-gray-600">
+              We provide Logistics design solutions focused on Africa, ensuring
+              transparency and visibility. Our expertise within Project
+              logistics ensures that your cargo is safely and efficiently
+              delivered within the African hinterland.
             </p>
           </motion.div>
         </div>
