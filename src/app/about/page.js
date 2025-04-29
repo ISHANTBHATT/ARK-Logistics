@@ -390,7 +390,7 @@ const Page = () => {
                   <span className="font-bold"> Representation Services:</span>{" "}
                   If you're a global shipping or logistics company looking to
                   establish a presence in the Middle East, ARK Logistics &
-                  Maritime can represent you on the ground
+                  Maritime can represent you on the ground.
                 </p>
                 <p className="text-gray-600 mb-2">
                   <span className="font-bold">Commodity Trading:</span> ARK
