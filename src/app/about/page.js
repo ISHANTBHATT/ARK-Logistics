@@ -381,21 +381,34 @@ const Page = () => {
                 <p className="text-gray-600 mb-4">
                   ARK offers a wide range of services, including:
                 </p>
-                <p className="text-gray-600 ">
-                  <span className="font-bold"> Representation Services: </span>{" "}
-                  Acting on behalf of clients to ensure their interests are
-                  well-represented in all maritime and logistics dealings.
+                <p className="text-gray-600 mb-2">
+                  <span className="font-bold">Advisory:</span> We are
+                  consultants specializing in the ports, shipping, and logistics
+                  sector, with a strong focus on the Middle East and Africa.
                 </p>
-                <p className="text-gray-600">
-                  <span className="font-bold">Commodity Trading:</span>{" "}
-                  Facilitating the buying and selling of various bulk
-                  commodities, leveraging market knowledge for optimal trading
-                  outcomes.
+                <p className="text-gray-600 mb-2">
+                  <span className="font-bold"> Representation Services:</span>{" "}
+                  If you're a global shipping or logistics company looking to
+                  establish a presence in the Middle East, ARK Logistics &
+                  Maritime can represent you on the ground
+                </p>
+                <p className="text-gray-600 mb-2">
+                  <span className="font-bold">Commodity Trading:</span> ARK
+                  Logistics & Maritime Commodity Trading has revolutionized the
+                  transportation and trading of raw materials by seamlessly
+                  connecting global sellers and buyers.
+                </p>
+                <p className="text-gray-600 mb-2">
+                  <span className="font-bold">Freight Brokerage:</span> We also
+                  handle Freight Brokerage services, where we connect regional
+                  feeder operators with Carriers and NVOs.
                 </p>
                 <p className="text-gray-600 mb-8">
-                  <span className="font-bold">Freight Brokerage:</span>{" "}
-                  Connecting shippers with carriers to ensure efficient and
-                  cost-effective transportation solutions.
+                  <span className="font-bold">Logistics:</span> We provide
+                  Logistics design solutions focused on Africa, ensuring
+                  transparency and visibility. Our expertise within Project
+                  logistics ensures that your cargo is safely and efficiently
+                  delivered within the African hinterland.
                 </p>
               </motion.div>
 
