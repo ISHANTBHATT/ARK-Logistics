@@ -18,14 +18,14 @@ export async function POST(request) {
 
     await transporter.sendMail({
       from: email,
-      to: email,
+      to: process.env.ADMIN_EMAIL,
       subject: "New Contact Form Submission",
       html: `<p>Dear Admin,</p>
       <p><strong>User Information:</strong></p>
       <ul>
       <li><strong>Name:</strong> ${userName}</li>
       <li><strong>EMail:</strong> ${userEmail}</li>
-      <li><strong>Subject:</strong> ${phone}</li>
+      <li><strong>Phone No.:</strong> ${phone}</li>
       <li><strong>Message:</strong> ${message}</li>
       </ul>`,
     });
