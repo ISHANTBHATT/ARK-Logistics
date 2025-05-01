@@ -242,7 +242,7 @@ function Page() {
     setIsLoading(true);
     const { name, email, phone, message } = formData;
     try {
-      await fetch("/api/contact", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -252,6 +252,12 @@ function Page() {
           message: message,
         }),
       });
+      if (res.ok) {
+        alert("Message sent successfully!");
+        setFormData({ name: "", email: "", phone: "", message: "" }); // reset form
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
     } catch (error) {
       console.error(error);
     }
