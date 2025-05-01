@@ -25,7 +25,7 @@ export async function POST(request) {
       <ul>
       <li><strong>Name:</strong> ${userName}</li>
       <li><strong>EMail:</strong> ${userEmail}</li>
-      <li><strong>Phone No.:</strong> ${phone}</li>
+      <li><strong>Phone Number:</strong> ${phone}</li>
       <li><strong>Message:</strong> ${message}</li>
       </ul>`,
     });
